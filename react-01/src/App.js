@@ -1,22 +1,16 @@
-import React from "react";
-import Navbar from "./Navbar/Navbar";
-import Employee from "./AccessVariables-C-F/Employee"
-import User from "./AccessVariables-C-F/User"
+import React from "react"
 
-class App extends React.Component {
-    constructor(props) {                      //Always constructor Going to execute first
-        super(props);
-        console.log("hello im constructor");
-    }
-    render() {
-        console.log("rander methood execute second");
-        return <div>
-            <h1>hello im from app</h1>
-            <Navbar />
-            <Employee />
-            <hr />
-            <User />
-        </div>
-    }
+
+
+class App extends React.Component{
+
+render(){
+    return<div>
+        <h1>Hello im the App file</h1>
+    </div>
+}
+
+
+
 }
 export default App
