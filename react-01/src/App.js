@@ -1,11 +1,13 @@
-import Login from './functionalComp/Login'
-import Footer from "./functionalComp/Footer"
-import Header from "./classComp/Header"
-let App=()=>{
-return <div><h1>hello react</h1>
-<Login/>
-<Footer/>
-<Header/>
-</div>
+import React from "react";
+import Navbar from "./Navbar/Navbar";
+
+class App extends React.Component{
+
+    render(){
+        return <div>
+            <h1>hello im from app</h1>
+            <Navbar/>
+        </div>
+    }
 }
 export default App

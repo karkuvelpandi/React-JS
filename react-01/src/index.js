@@ -1,6 +1,4 @@
-/* const ReactDOM=require("react-dom")  *///ES5
 import App from "./App"
-import ReactDOM from "react-dom"  //ES6
+import ReactDOM from "react-dom"
 
-ReactDOM.render(<App/>,document.getElementById("root"))
-
+ReactDOM.render(<App/>,document.getElementById('root'))
