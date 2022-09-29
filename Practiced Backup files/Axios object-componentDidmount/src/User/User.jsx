@@ -42,7 +42,7 @@ class User extends React.Component {
                                                 <td>{per.id}</td>
                                                 <td>{per.firstname}</td>
                                                 <td>{per.age}</td>
-                                                <td>{per.gender}</td>
+                                                <td>{per.gender}</td>   
                                                 <td>{per.email}</td>
                                                 <td><img src={per.image} height="50px" alt="" /></td>
                                             </tr>

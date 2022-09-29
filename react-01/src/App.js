@@ -1,11 +1,18 @@
 import React from "react";
-import Login from "./Login/Login"
+import Navbar from "./Navbar/Navbar"
+import {BrowserRouter as Router, Routes,Route} from "react-router-dom"
+import UserApp from "./UserApp/UserApp";
 class App extends React.Component{
     render(){
-        return<React.Fragment>
-            <h1>I am App</h1><br/>
-            <Login/>
-        </React.Fragment>
+        return<>
+       <Router>
+       <Navbar/>
+       <Routes>
+        <Route path="/UserApp" element={<UserApp/>}></Route>
+       </Routes>
+       </Router>
+        
+        </>
     }
 }
 export default App
