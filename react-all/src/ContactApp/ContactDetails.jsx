@@ -10,11 +10,11 @@ class ContactDetails extends React.Component{
            <h1>{this.props.selectedData.name}</h1>
           </div>
           <div className="card-body">
-          <ul>
-            <li>Email   :{this.props.selectedData.email}</li>
-            <li>City    :{this.props.selectedData.address.city}</li>
-            <li>Company :{this.props.selectedData.company.name}</li>
-            <li>Website :{this.props.selectedData.website}</li>
+          <ul className="list-group">
+            
+            <li className="list-group-item"><h3>Email   : </h3>{this.props.selectedData.email}</li>
+            <li className="list-group-item"><h3>Company : </h3>{this.props.selectedData.company.name}</li>
+            <li className="list-group-item"><h3>Website :</h3> {this.props.selectedData.website}</li>
           </ul>
           </div>
         </div>

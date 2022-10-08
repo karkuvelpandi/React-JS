@@ -15,7 +15,7 @@ getselUser=(user)=>{
    console.log(user.id)
    this.setState({selectedUser:user})
 }
-updateHandler=()=>{
+componentDidMount=()=>{
  Axios.get ('https://jsonplaceholder.typicode.com/users')
  .then((response)=>{
     this.setState({persons:response.data})
@@ -26,7 +26,7 @@ updateHandler=()=>{
 }
 render(){
     return <>
-    <h1>Product APP</h1>
+    <h1>Contact APP</h1>
     <button onClick={this.updateHandler}>click</button>
     <pre>{JSON.stringify(this.state)}</pre>
     <div className="container">
