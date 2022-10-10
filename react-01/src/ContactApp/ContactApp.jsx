@@ -27,16 +27,28 @@ updateHandler=()=>{
 }
 render(){
     return <>
-    <h1>Product APP</h1>
+    <h1>Contact APP</h1>
     <button onClick={this.updateHandler}>click</button>
     <pre>{JSON.stringify(this.state)}</pre>
     <div className="container">
      <div className="row">
          <div className="col-md-8">
-              {<ContactList data={this.state.persons} method1={this.getselUser} />}
+              {
+                this.state.persons.length>0 ?
+                 <>
+                 {<ContactList data={this.state.persons} method1={this.getselUser} />}
+                 </> : null
+              }
          </div>
          <div className="col-md-4">
-         {<ContactDetails selectedData={this.state.selectedUser}/>}
+         {
+            Object.keys(this.state.selectedUser).length > 0 ?
+             <>
+             {
+                <ContactDetails selectedData={this.state.selectedUser} />
+             }
+             </> : null
+         }
          </div>
      </div>
     </div>

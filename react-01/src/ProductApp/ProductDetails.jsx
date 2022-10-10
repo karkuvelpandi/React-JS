@@ -1,23 +1,19 @@
 import React from 'react'
 
-function ProductDetails({userData}) {
+function ProductDetails(props) {
   return <>
     <div>ProductDetails</div>
-    <pre>{JSON.stringify({userData})}</pre>
-    <div className="card">
-     {Object.keys(userData).length?<>
-     
+    {/* <pre>{JSON.stringify(props)}</pre> */}
+    <div className="card">     
      return <div className="card-header">
-       {/* <img src={userData.image} alt="" /> */}
+       {/* <img src={props.userData.profiles.image} alt="" /> */}
       </div>
       <div className="card-body">
-       <h2>Name :{userData.firstName}</h2>
-       <h2>Eamil :{userData.email}</h2>
-       <h2>DOB :{userData.birthDate}</h2> 
+       <h2>Name :{props.userData.profiles.firstName}</h2>
+       <h2>Eamil :{props.userData.profiles.email}</h2>
+       <h2>DOB :{props.userData.profiles.birthDate}</h2> 
       </div>
-     
-     </>:null}
-    </div>
+         </div>
   </>
 }
 

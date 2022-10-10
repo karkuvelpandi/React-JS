@@ -1,5 +1,4 @@
 import React from 'react'
-import Axios from "axios"
 
 let ProductList = (props) => {
 
@@ -9,8 +8,8 @@ let ProductList = (props) => {
    };
 
     return <>
-        <div>ProductDetails</div>
-        <pre>{JSON.stringify(props.userData.users)}</pre>
+        <div>Product List</div>
+        {/* <pre>{JSON.stringify(props)}</pre> */}
         <div className="container">
             <div className="row">
                 <div className="col-md">
@@ -24,17 +23,14 @@ let ProductList = (props) => {
                             </tr>
                         </thead>
                         <tbody className='bg-light '>
-                          {Object.keys(props.userData).length>0?<>
-                          {props.userData.users.map((user)=>{
+                          {props.userData.data.users.map((user)=>{
                             return <tr key={user.id} onClick={selectedUser.bind(this,user)}>
                                 <td>{user.id}</td>
                                 <td>{user.firstName}</td>
                                 <td>{user.email}</td>
                                 <td>{user.address.city}</td>
-                            
                             </tr>
                           })}
-                          </>: null}
                         </tbody>
                     </table>
                 </div>
