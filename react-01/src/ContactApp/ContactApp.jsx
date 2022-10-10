@@ -12,6 +12,7 @@ constructor(props){
         selectedUser:{}
     }
 }
+
 getselUser=(user)=>{
    console.log(user.id)
    this.setState({selectedUser:user})
