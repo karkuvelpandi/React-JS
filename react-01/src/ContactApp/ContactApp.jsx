@@ -2,6 +2,7 @@ import React from 'react'
 import ContactList from './ContactList'
 import ContactDetails from './ContactDetails'
 import Axios from 'axios'
+import axios from 'axios'
 
 class ContactApp extends React.Component{
 constructor(props){
@@ -16,7 +17,7 @@ getselUser=(user)=>{
    this.setState({selectedUser:user})
 }
 updateHandler=()=>{
- Axios.get ('https://jsonplaceholder.typicode.com/users')
+ axios.get ('https://jsonplaceholder.typicode.com/users')
  .then((response)=>{
     this.setState({persons:response.data})
  })
