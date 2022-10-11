@@ -9,6 +9,7 @@ let Navbar = () => {
             <li className='nav-list'>  <Link to='Clock' className="nav-items">Clock</Link> </li>
             <li className='nav-list'>  <Link to='ContactApp' className="nav-items">ContactApp</Link></li>
             <li className='nav-list'>  <Link to='UserApp' className="nav-items">UserApp</Link></li>
+            <li className='nav-list'>  <Link to='ProductApp' className="nav-items">ProductApp</Link></li>
         </ul>
     </nav>
 }

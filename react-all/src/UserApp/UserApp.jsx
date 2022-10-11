@@ -28,10 +28,16 @@ componentDidMount=()=>{
             <div className="container">
                 <div className="row">
                     <div className="col-md-8">
-                        <UserList userData={this.state.persons} fun={this.selFun}/>
+                        {Object.keys(this.state.persons).length>0?<>
+                            <UserList userData={this.state.persons} fun={this.selFun}/>
+                        </>:null}
+                        
                     </div>
                     <div className="col-md-4">
-                        <UserDetails UserDetails={this.state.userProfile} />
+                        {Object.keys(this.state.userProfile).length>0?<>
+                            <UserDetails UserDetails={this.state.userProfile} />
+                        </>:null}
+                        
                     </div>
                 </div>
             </div>
