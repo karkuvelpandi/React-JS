@@ -4,8 +4,8 @@ import {useState} from 'react'
 let UseState= ()=>{
 let [Msg,setMsg]=useState("Hi")
 
-let updateHandler=(a)=>{
-     setMsg(a)
+let updateHandler=(e)=>{
+     setMsg(e)
 }
     return <>
     <h1>Hi man iam UseState component</h1>
