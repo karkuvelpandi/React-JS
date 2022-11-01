@@ -1,12 +1,23 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 import "./App.css"
-let App=()=>{
-    return <>
-    <nav  className='navbar navbar-light bg-light navbar-expand-lg'>
-    <Link to='' className='navbar-brand' > ToDo App</Link>
-   
+import ToDo from './ToDo/ToDo'
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import Pending from './ToDo/Pending'
+import Completed from './ToDo/Completed'
+let App = () => {
+  return <>
+    <nav className='navbar navbar-dark bg-light navbar-expand-lg'>
+      <a href='/'>ToDo App</a>
     </nav>
-    </>
+    <Router>
+    <ToDo />
+      <Routes>
+      
+        <Route path="/completed" element={<Completed />} />
+        <Route path="/pending" element={<Pending />} />
+      </Routes>
+    </Router>
+    
+  </>
 }
 export default App
