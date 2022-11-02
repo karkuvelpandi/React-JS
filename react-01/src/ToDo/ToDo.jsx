@@ -4,12 +4,13 @@ import Axios from 'axios'
 import { useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import Completed from "./Completed";
+import Pending from "./Pending"
 
 let ToDo = () => {
     let [tasks, setTask] = useState("");
     let [data, setData] = useState({})
-
     let [completeClick, setCompleteClick] =useState(false)
+    let [pendingClick,setPendingClick]=useState(false)
 
     useEffect(() => {
         Axios.get('http://localhost:3000/activites')
@@ -52,16 +53,14 @@ let ToDo = () => {
                     {
                         completeClick ?<>
                         <Completed />
-                        </> : <>
-                        <table>
+                        </> : <> {pendingClick ?<Pending/>:  <table>
                         <thead>
                             <tr>
                                 <td>Task Id</td>
                                 <td>Task</td>
                                 <td>Status</td>
                                 <td>Modify</td>
-                            </tr>
-                          
+                            </tr>        
                         </thead>
                         <tbody>
                             {data.length > 0 ? <>
@@ -77,7 +76,8 @@ let ToDo = () => {
                                 }
                             </> : null}
                         </tbody>
-                    </table>
+                    </table> }
+                       
                         </>
                     }
 
