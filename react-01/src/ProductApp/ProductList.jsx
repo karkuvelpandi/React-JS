@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {toast} from 'react-toastify';
 import { useState } from 'react'
 let ProductList = (props) => {
     // let [err, setErr]=useState(false)
@@ -9,6 +9,7 @@ let ProductList = (props) => {
         alert('Please fill the field')
     }
   
+    
     let selectedUser = (user) => {
         console.log(user.id);
         props.selprofile(user);
@@ -31,7 +32,9 @@ let ProductList = (props) => {
             const result = foundUser.filter((singleData) => {
 
                 return singleData.firstName.toLowerCase().startsWith(searchName.toLowerCase())
+
             })
+
             setFoundUser(result)
         }
        

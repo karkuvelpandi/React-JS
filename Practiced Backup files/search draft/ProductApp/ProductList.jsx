@@ -1,14 +1,7 @@
 import React from 'react'
-
 import { useState } from 'react'
 let ProductList = (props) => {
-    // let [err, setErr]=useState(false)
-    const [click, setClick] = useState(false)
-   
-    let handleClick = () => {
-        alert('Please fill the field')
-    }
-  
+
     let selectedUser = (user) => {
         console.log(user.id);
         props.selprofile(user);
@@ -26,22 +19,19 @@ let ProductList = (props) => {
     };
 
     let filter = () => {
-       
         if (searchName !== "") {
             const result = foundUser.filter((singleData) => {
 
                 return singleData.firstName.toLowerCase().startsWith(searchName.toLowerCase())
+
             })
+
             setFoundUser(result)
         }
-       
-       }
-        
-    //  let requiredField=()=>{
-    //     if (searchName == "") {
-    //         return setErr(!true)
-    //     }
-    //  };   
+        if (searchName == "") {
+            setFoundUser(dataArray)
+        }
+    };
     let refresh = () => {
         const searchName = ""
         if (searchName == "") {
@@ -59,19 +49,14 @@ let ProductList = (props) => {
                     type="search"
                     value={searchName}
                     placeholder="Filter By Name"
-                    onChange={getData}
-                    onFocus={refresh}                     //for automatic refresh after search box is empty
-                    required   
+                    onChange={getData}      
                 />
-                <input type="button" value='search' onClick={searchName===""?handleClick:filter.bind(this, searchName)} /* onClick={filter.bind(this, searchName)} */ /><br/>
-               {/*  <input type="button" value='refresh' onClick={refresh.bind(this, searchName)} /> */}
-               </div>
-               {/*  {
-                    click ? <><input type="text" disabled placeholder='Please fill the Search field' /></>:null
-                } */}
+                <input type="button" value='search' onClick={filter.bind(this, searchName)} />
+                <input type="button" value='refresh' onClick={refresh.bind(this, searchName)} />
 
-            
-        </div><div><p></p></div>
+
+            </div>
+        </div><br />
 
         <div className="container">
 
