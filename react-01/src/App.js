@@ -12,7 +12,7 @@ let App = () => {
       {/* <a to='/ProductApp'> ProductApp</a> */}
     </nav>
     <Router>
-    <ToDo />
+    
       <Routes>
         
         <Route path="/completed" element={<Completed />} />
