@@ -53,7 +53,8 @@ let ToDo = () => {
                     {
                         completeClick ?<>
                         <Completed />
-                        </> : <> {pendingClick ?<Pending/>:  <table>
+                        </> : 
+                          <table>
                         <thead>
                             <tr>
                                 <td>Task Id</td>
@@ -78,9 +79,7 @@ let ToDo = () => {
                         </tbody>
                     </table> }
                        
-                        </>
-                    }
-
+                        
                 </div>
 
             </div>
