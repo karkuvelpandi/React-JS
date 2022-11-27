@@ -1,0 +1,21 @@
+#submit-button{
+     display: flex;
+     justify-content: space-between;
+}
+.btn{
+    height: 50px;
+    width: 100px;
+}
+.card{
+   min-height: 250px;
+}
+table{
+    border:2px solid black;
+}
+table thead{
+    background-color: #333;
+    color: aliceblue;
+}
+tbody tr :hover{
+    color:blue;
+}
