@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect  } from 'react'
 import "./ToDo.css"
 import Axios from 'axios'
-import { useEffect } from 'react'
+
 const Todolist = () => {
   const [task, settask] = useState({ todo: '', status: 'Pending' })
   const [store, setStore] = useState([])
@@ -9,12 +9,12 @@ const Todolist = () => {
   const [disable, SetDisable] = useState(false)
   const [selectedTask, setSelectedTask] = useState({ todo: '', status: '', id: '' })
   const [editFlag, setEditflag] = useState(false)
-  const [selectedID, setSelectedID] = useState()
+  const [selectedID, setSelectedID] = useState(0)
 
 /*******************Fetch and Update current changes **********************/
 
   let fetchTask = () => {
-    Axios.get('http://localhost:3000/tasks')
+    Axios.get('http://localhost:4000/tasks')
       .then((response) => {
         setStore(response.data)
       })
@@ -23,7 +23,8 @@ const Todolist = () => {
   
   useEffect(() => {
     fetchTask()
-  }, [])
+    console.log("rendering");
+  },[])
 
   const changehandler = (e) => {
     if (editFlag) {
@@ -38,7 +39,7 @@ const Todolist = () => {
 
   const addSubmitHandler = (e) => {
     e.preventDefault()
-    let url = "http://localhost:3000/tasks"
+    let url = "http://localhost:4000/tasks"
     Axios.post(url, task)
       .then(() => {
         fetchTask()
@@ -55,7 +56,7 @@ const Todolist = () => {
 
   const deletehandler = (id) => {
     console.log(id);
-    Axios.delete(`http://localhost:3000/tasks/${id}`)
+    Axios.delete(`http://localhost:4000/tasks/${id}`)
       .then(() => {
         console.log("Task deleted sucessfully...!")
         fetchTask()
@@ -67,7 +68,7 @@ const Todolist = () => {
 
   const getEditData = (id) => {
     setSelectedID(id)
-    Axios.get(`http://localhost:3000/tasks/${id}`)
+    Axios.get(`http://localhost:4000/tasks/${id}`)
       .then((response) => {
         setSelectedTask(response.data)
         SetDisable(true)
@@ -77,7 +78,7 @@ const Todolist = () => {
   }
   const editSubmitHandler = (e) => {
     e.preventDefault()
-    let url = `http://localhost:3000/tasks/${selectedID}`
+    let url = `http://localhost:4000/tasks/${selectedID}`
     Axios.put(url, selectedTask)
       .then((response) => {
         fetchTask()
@@ -109,7 +110,7 @@ const Todolist = () => {
                   {
                     editFlag ? <button className='btn btn-success' onClick={editSubmitHandler} type='submit'>Edit</button> : <button className='btn btn-info' onClick={addSubmitHandler} type='submit'>Add</button>
                   }
-                  {disable ? <div className='form-group' style={{ display: "inline-block" }}>
+                  { disable ? <div className='form-group' style={{ display: "inline-block" }}>
                     <select name='status' value={editFlag ? selectedTask.status : ""} onChange={changehandler} className='form-control-lg'>
                       <option>Select Status</option>
                       <option>Pending</option>

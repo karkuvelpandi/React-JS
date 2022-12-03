@@ -1,0 +1,11 @@
+#submit-button{
+     display: flex;
+     justify-content: space-between;
+}
+.btn{
+    height: 50px;
+    width: 100px;
+}
+.card{
+   min-height: 250px;
+}
