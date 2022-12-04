@@ -1,12 +1,16 @@
 import { useState } from "react"
 import React from 'react'
+import { useEffect} from "react"
+import { useNavigate } from "react-router-dom"
 
 const RegForm = () => {
-  let [emailErr, setEmailErr] = useState("")
-  let [nameErr, SetNameErr] = useState("")
-  let [mobileErr, SetMobileErr] = useState("")
-  let [passwordErr, SetPasswordErr] = useState("")
-  let [conformPasswordErr, SetConformPasswordErr] = useState("")
+   
+  let [emailErr, setEmailErr] = useState(null)
+  let [nameErr, SetNameErr] = useState(null)
+  let [mobileErr, SetMobileErr] = useState(null)
+  let [passwordErr, SetPasswordErr] = useState(null)
+  let [conformPasswordErr, SetConformPasswordErr] = useState(null)
+  let[valid,setValid]=useState(false)
 
   let [userDetails, setUserDetails] = useState({
     name: "",
@@ -19,10 +23,21 @@ const RegForm = () => {
   let getData = (event) => {
     setUserDetails({ ...userDetails, [event.target.name]: event.target.value })
   }
+ 
+  useEffect(()=>{
+  if(valid===true){
+    validateFun(userDetails)
+  }
+  },[userDetails])
+
   let submitHandler = (e) => {
     e.preventDefault()
-    validateFun(userDetails)
-
+    setValid(true)
+    let submit= validateFun(userDetails) 
+    if (submit===true){
+      alert("Form submitted successfully")
+      
+    }
   }
   let validateFun = (value) => {
     let name = value.name
@@ -31,16 +46,16 @@ const RegForm = () => {
     let password=value.password
     let conformPassword=value.conformPassword
 
-    if (name == "") {
+    if (name === "") {
       SetNameErr("please enter name")
     }
-    else if (name.length <= 4 || name.length >= 10) {
+    else if (name.length <= 4 || name.length >= 15) {
       SetNameErr("please enter min 4 and max 10 character only")
     }
-    else if (name.length >= 4 || name.length <= 10) {
+    else if (name.length >= 4 || name.length <= 15) {
       SetNameErr("")
     }
-    if (email == "") {
+    if (email === "") {
       setEmailErr("please enter email")
     }
     else if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i.test(email)) {
@@ -49,32 +64,56 @@ const RegForm = () => {
     else {
       setEmailErr("")
     }
-    if (mobile == "") {
+    if (mobile === "") {
       SetMobileErr("please enter Mobile Number")
     }
-    else if (mobile.length != 10) {
+    else if (mobile.length !== 10) {
       SetMobileErr("please enter min 4 and max 10 character only")
     }
-    else if (mobile.length == 10) {
+    else if (mobile.length === 10) {
       SetMobileErr("")
     }
-    if(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/.test(password)){
-
+    if(!password){
+      SetPasswordErr("Please enter password")
     }
-   
+    else if(!/^[A-Z]/.test(password)){
+     SetPasswordErr("Must have atleast 1 capital letter")
+    } 
+     else if(!/^(?=.*\d)/.test(password)){
+     SetPasswordErr("Must have atleast 1 number ")
+    }
+    else if(password.length <4 || password.length>10){
+      SetPasswordErr("Password requird min 4 to 10 characters")
+    }
+    else{
+      SetPasswordErr("")
+    }
+    if(!conformPassword){
+      SetConformPasswordErr("Please enter password")
+    }
+    else if(password !==conformPassword){
+      SetConformPasswordErr("Password does't match")
+    }
+    else if(password ===conformPassword){
+      SetConformPasswordErr("")
+    }
+   if(nameErr==="" && emailErr==="" &&mobileErr==="" &&passwordErr==="" &&conformPasswordErr===""){
+    return true
+   }
 
   }
 
 
 
   return <>
-    <pre>{JSON.stringify(userDetails)}</pre>
+    {/* <pre>{JSON.stringify(userDetails)}</pre>
     <pre>{JSON.stringify(nameErr)}</pre>
     <pre>{JSON.stringify(emailErr)}</pre>
+    <pre>{JSON.stringify(passwordErr)}</pre> */}
     <div className="container">
       <div className="row">
         <div className="col-md-6">
-          <form action="" onSubmit={submitHandler}>
+          <form  onSubmit={submitHandler}>
             <div className="form-group">
               <input type="text" className="form-control" name="name" onChange={getData} placeholder='Name' />
               <h6 className="text-danger">{nameErr}</h6>
@@ -88,11 +127,11 @@ const RegForm = () => {
               <h6 className="text-danger">{mobileErr}</h6>
             </div>
             <div className="form-group">
-              <input type="password" className="form-control" name="password" onChange={getData} placeholder='Password' />
+              <input type="password" autoComplete="true"  className="form-control" name="password" onChange={getData} placeholder='Password' />
               <h6 className="text-danger">{passwordErr}</h6>
             </div>
             <div className="form-group">
-              <input type="password" className="form-control" name="conformPassword" onChange={getData} placeholder='Conform-Password' />
+              <input type="password" autoComplete="true"  className="form-control" name="conformPassword" onChange={getData} placeholder='Conform-Password' />
               <h6 className="text-danger">{conformPasswordErr}</h6>
             </div>
             <input type="submit" value="Register" className='btn btn-success' />
