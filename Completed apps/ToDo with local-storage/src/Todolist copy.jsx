@@ -14,7 +14,6 @@ const Todolist = () => {
     console.log(formvalues)
     const newstore = [...store, formvalues]
     setStore(newstore)
-    localStorage.setItem("todo",[...formvalues,formvalues])
     setFormvalues({ todo: '', status: 'Pending' })
     SetDisable(false)
   }
