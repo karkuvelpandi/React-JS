@@ -1,20 +1,34 @@
 import React, { useState } from 'react'
+import { useEffect } from 'react'
 import "./ToDo.css"
 
 const Todolist = () => {
+
+  let getLocalDate = () => {
+    let list = localStorage.getItem("store")
+    if (list) {
+      return JSON.parse(list);
+    } else {
+      return [];
+    }
+  }
   const [formvalues, setFormvalues] = useState({ todo: '', status: 'Pending' })
-  const [store, setStore] = useState([])
+  const [store, setStore] = useState(getLocalDate())
   const [search, SetSearch] = useState('')
   const [disable, SetDisable] = useState(false)
   const changehandler = (e) => {
     setFormvalues({ ...formvalues, [e.target.name]: e.target.value })
   }
+  useEffect(() => {
+    localStorage.setItem("store", [JSON.stringify(store)])
+  }, [store])
+
   const submithandler = (e) => {
     e.preventDefault()
     console.log(formvalues)
     const newstore = [...store, formvalues]
     setStore(newstore)
-    localStorage.setItem("todo",[...formvalues,formvalues])
+
     setFormvalues({ todo: '', status: 'Pending' })
     SetDisable(false)
   }
