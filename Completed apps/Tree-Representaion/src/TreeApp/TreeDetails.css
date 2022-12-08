@@ -1,15 +1,17 @@
 .detailImage{
-      height: 200px;
+      max-height: 200px;
+      min-height: 50px;
       border-radius: 50%;
       border:1px double black;
       box-shadow: 8px 8px 8px gray,inset 8px 8px 8px gray;
 }
 #detailsC-head{
-     background: linear-gradient(45deg,rgb(152, 95, 95),rgb(202, 186, 186));
+    background: transparent;
      border-top-left-radius: 45px;
      border-top-right-radius:45px ;
 }
 .detailCard{
+         background: linear-gradient(45deg,rgb(152, 95, 95),rgb(202, 186, 186));
     border: 1px solid blue;
     border-radius: 10%;
 }

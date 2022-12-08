@@ -60,19 +60,23 @@ const TreeDetails = (props) => {
                                 <div className="card">sdf</div>
                             </div>
                         </div>
+                        <div className="verticalLine"></div>
+                        <div className="horizontalLine"></div>
                         <div className="row">
                             <div className="col">
-                                <div className="card"></div>
-                                <div className="card"></div>
-                                <div className="card"></div>
-                                <div className="card"></div>
+                                <div className="card">sdf</div>
+                                <div className="card">sdf</div>
+                                <div className="card">sdf</div>
+                                <div className="card">sdf</div>
                             </div>
                         </div>
+                        <div className="verticalLine"></div>
+                        <div className="horizontalLine"></div>
                         <div className="row">
                             <div className="col">
-                                <div className="card"></div>
-                                <div className="card"></div>
-                                <div className="card"></div>
+                                <div className="card">sdf</div>
+                                <div className="card">sdf</div>
+                                <div className="card">sdf</div>
                             </div>
                         </div>
                     </div>

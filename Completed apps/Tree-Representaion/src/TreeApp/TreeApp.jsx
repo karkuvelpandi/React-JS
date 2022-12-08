@@ -18,10 +18,10 @@ const TreeApp = () => {
     return <>
         <div className="container-fluid">
             <div className="row">
-                <div className="col-md-4">
+                <div className="col-md-3">
                     <TreeList details={data} getEmp={updateOneEmp} />
                 </div>
-                <div className="col-md-8">
+                <div className="col-md-9">
                   <TreeDetails wholeData={data} singleData={selectedEmp}/>
                 </div>
             </div>
