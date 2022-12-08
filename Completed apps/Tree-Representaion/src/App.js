@@ -1,10 +1,12 @@
 import React from 'react'
-import Todolist from './Todolist'
-
+import TreeApp from './TreeApp/TreeApp'
+// import Todolist from './Todolist'
+import './App.css'
 const App = () => {
   return (
     <div>
-      <Todolist/>
+      {/* <Todolist/> */}
+      <TreeApp/>
     </div>
   )
 }

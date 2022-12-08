@@ -1,0 +1,28 @@
+.detailImage{
+      height: 200px;
+      border-radius: 50%;
+      border:1px double black;
+      box-shadow: 8px 8px 8px gray,inset 8px 8px 8px gray;
+}
+#detailsC-head{
+     background: linear-gradient(45deg,rgb(152, 95, 95),rgb(202, 186, 186));
+     border-top-left-radius: 45px;
+     border-top-right-radius:45px ;
+}
+.detailCard{
+    border: 1px solid blue;
+    border-radius: 10%;
+}
+
+.verticalLine{
+    border:1px dashed red;
+       width: 2px;
+       height: 100px;
+       margin:2rem auto
+}
+.horizontalLine{
+    border:1px dashed red;
+    width: 300px;
+    height: 2px;
+    margin:2rem auto
+}
