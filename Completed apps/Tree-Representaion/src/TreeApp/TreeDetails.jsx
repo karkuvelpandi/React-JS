@@ -10,9 +10,9 @@ const TreeDetails = (props) => {
         setSingleData(props.singleData)
     }, [props])
     return <>
-        <pre>{JSON.stringify(data)}</pre>
-        <pre>{JSON.stringify(singleData)}</pre>
-        <div className="container-fluid">
+        {/* <pre>{JSON.stringify(data)}</pre>
+        <pre>{JSON.stringify(singleData)}</pre> */}
+        <div className="container-fluid mt-5" >
             <div className="row">
                 <div className="col-md-4">
                     {
@@ -30,58 +30,13 @@ const TreeDetails = (props) => {
                                     </ul>
                                 </div>
                             </div>
-                        </> : <h3 style={{ marginTop: "100px", marginLeft: "50px", padding: 0, background: "lime", height: "40px" }}>&#128072;Select Employee...</h3>
+                        </> : <div style={{height:"340px"}}><h3 style={{ marginTop: "100px", marginLeft: "50px", padding: 0, background: "lime", height: "40px" }}>&#128072;Select Employee...</h3></div>
                     }
 
                 </div>
-                <div className="col-md-8">
-                    <div className="container-fluid" style={{ boxSizing: "border-box" }}>
-                        <div className="row row-flex">
-                            <div className="card card1">
-                                <img src="" alt="no pic" />
-                            </div>
-                        </div>
-                        <div className="v-line-sm"></div>
-                        <div className="h-line-lg"></div>
-                        <div className="row">
-                            <div className="v-line-sm"></div>
-                            <div className="v-line-sm"></div>
-                            <div className="v-line-sm"></div>
-                        </div>
-                        <div className="row row1">
-                            <div className="card card1">sdf</div>
-                            <div className="card card1">sdf</div>
-                            <div className="card card1">sdf</div>
-                        </div>
-                        <div className="row">
-                            <div className="col-md-4 row2">
-                                <div className="v-line-sm"></div>
-                                <div className="card card1">
-
-                                </div>
-                            </div>
-
-
-                            <div className="col-md-4 row2">
-                                <div className="v-line-sm"></div>
-                                <div className="card card1">
-
-                                </div>
-                            </div>
-
-                            <div className="col-md-4 row2">
-                                <div className="v-line-xsm">       </div>
-                                <div className="split-line-sm"></div>
-                                <div className="row3">
-                                    <div className="card card1"> </div>
-                                    <div className="card card1"> </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+               
             </div>
+            
             <div className="row">
                 <div className="col-md-12">
                     <div className="row row-flex">
@@ -104,18 +59,20 @@ const TreeDetails = (props) => {
                                 <div className="card card1">df</div>
                                 <div className="card card1">df</div>
                             </div>
-                            <div className="row4">
-                               <div className="col-md-6">
-                               <div className="v-line-lg"></div>
-                               </div>
-                               <div className="col-md-6">
-                               <div className="v-line-sm" style={{}}></div>
-                               <div className="card card1">df</div>
-                               </div>
+                            <div style={{display:"flex",gap:"2rem",position:"relative"}}>
+                            <div >
+                            <div className="v-line-sm"></div>
+                            <div className="card card1">df</div>
+                            </div>
+                            <div>
+                            <div className="v-line-sm"></div>
+                            <div className="card card1">df</div>
+                            </div>
                             </div>
                         </div>
 
-                        <div className="col-md-4 row2">
+
+                        <div className="col-md-4 row5">
                             <div className="v-line-sm"></div>
                             <div className="card card1">df</div>
                             <div className="v-line-sm"></div>

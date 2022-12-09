@@ -13,8 +13,8 @@ const TreeList = (props) => {
          props.getEmp(emp)
     }
     return <>
-        <pre>{JSON.stringify(employees)}</pre>
-        <div className="container-fluid">
+        {/* <pre>{JSON.stringify(employees)}</pre> */}
+        <div className="container-fluid mt-5">
             <div className="row">
                 <div className="col">
                     <h3>for search</h3>
