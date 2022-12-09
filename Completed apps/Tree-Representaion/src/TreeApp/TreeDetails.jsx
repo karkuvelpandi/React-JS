@@ -49,36 +49,96 @@ const TreeDetails = (props) => {
                             <div className="v-line-sm"></div>
                         </div>
                         <div className="row row1">
-                                <div className="card card1">sdf</div>
-                                <div className="card card1">sdf</div>
-                                <div className="card card1">sdf</div>
+                            <div className="card card1">sdf</div>
+                            <div className="card card1">sdf</div>
+                            <div className="card card1">sdf</div>
                         </div>
                         <div className="row">
                             <div className="col-md-4 row2">
-                            <div className="v-line-sm"></div>
-                            <div className="card card1">
+                                <div className="v-line-sm"></div>
+                                <div className="card card1">
 
+                                </div>
                             </div>
-                            </div>
+
+
                             <div className="col-md-4 row2">
-                            <div className="v-line-sm"></div>
-                            <div className="card card1">
+                                <div className="v-line-sm"></div>
+                                <div className="card card1">
 
+                                </div>
                             </div>
-                            </div>
+
                             <div className="col-md-4 row2">
-                            <div className="v-line-sm"></div>
-                            <div className="card card1">
-
-                            </div>
+                                <div className="v-line-xsm">       </div>
+                                <div className="split-line-sm"></div>
+                                <div className="row3">
+                                    <div className="card card1"> </div>
+                                    <div className="card card1"> </div>
+                                </div>
                             </div>
                         </div>
-                         
+
                     </div>
                 </div>
             </div>
             <div className="row">
+                <div className="col-md-12">
+                    <div className="row row-flex">
+                        <div className="card card1">
+                            dfs
+                        </div>
+                    </div>
+                    <div className="v-line-sm"></div>
+                    <div className="h-line-lg"></div>
+                    <div className="row">
 
+                        <div className="col-md-4 row2" >
+                            <div className="v-line-sm"></div>
+                            <div className="card card1">df</div>
+                            <div className="v-line-sm"></div>
+                            <div className="card card1">df</div>
+                            <div className="v-line-xsm"></div>
+                            <div className="split-line-sm" ></div>
+                            <div className="row4" style={{ position: "relative" }}>
+                                <div className="card card1">df</div>
+                                <div className="card card1">df</div>
+                            </div>
+                            <div className="row4">
+                               <div className="col-md-6">
+                               <div className="v-line-lg"></div>
+                               </div>
+                               <div className="col-md-6">
+                               <div className="v-line-sm" style={{}}></div>
+                               <div className="card card1">df</div>
+                               </div>
+                            </div>
+                        </div>
+
+                        <div className="col-md-4 row2">
+                            <div className="v-line-sm"></div>
+                            <div className="card card1">df</div>
+                            <div className="v-line-sm"></div>
+                            <div className="card card1">df</div>
+                            <div className="v-line-xsm"></div>
+                            <div className="split-line-sm" ></div>
+                            <div className="row4" style={{ position: "relative" }}>
+                                <div className="card card1">df</div>
+                                <div className="card card1">df</div>
+                            </div>
+                        </div>
+                        <div className="col-md-4 row5">
+                            <div className="v-line-sm"></div>
+                            <div className="card card1">df</div>
+                            <div className="v-line-xsm"></div>
+                            <div className="split-line-sm" ></div>
+                            <div className="row4" style={{ position: "relative" }}>
+                                <div className="card card1">df</div>
+                                <div className="card card1">df</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </>
