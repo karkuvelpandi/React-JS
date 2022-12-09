@@ -16,15 +16,45 @@
     border-radius: 10%;
 }
 
-.verticalLine{
+.v-line-sm{
     border:1px dashed red;
        width: 2px;
-       height: 100px;
-       margin:2rem auto
+       height: 40px;
+       margin:2rem auto;
+       margin-top: 0;
+       margin-bottom: 0;
+       
 }
-.horizontalLine{
+.h-line-lg{
     border:1px dashed red;
-    width: 300px;
+    max-width: 475px;
+    min-width: 50px;
     height: 2px;
-    margin:2rem auto
+    margin:2rem auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.card1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+     min-height: 100px;
+     min-width: 100px;
+    width: 100px;
+}
+.row-flex{
+    display: flex;
+    justify-content: center;
+}
+.row1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.row2{
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
 }

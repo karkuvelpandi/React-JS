@@ -30,55 +30,50 @@ const TreeDetails = (props) => {
                                     </ul>
                                 </div>
                             </div>
-                        </> : <h3 style={{ marginTop: "200px", marginLeft: "150px", padding: 0, outline: "1px solid red" }}>Select Your Professional</h3>
+                        </> : <h3 style={{ marginTop: "100px", marginLeft: "50px", padding: 0, background: "lime", height: "40px" }}>&#128072;Select Employee...</h3>
                     }
 
                 </div>
                 <div className="col-md-8">
                     <div className="container-fluid" style={{ boxSizing: "border-box" }}>
-                        <div className="row">
-                            <div className="col">
-                                <div className="card">sdf</div>
+                        <div className="row row-flex">
+                            <div className="card card1">
+                                <img src="" alt="no pic" />
                             </div>
                         </div>
-                        <div className="verticalLine"></div>
-                        <div className="horizontalLine"></div>
+                        <div className="v-line-sm"></div>
+                        <div className="h-line-lg"></div>
                         <div className="row">
-                            <div className="col">
-                                <div className="card">sdf</div>
-                                <div className="card">sdf</div>
-                                <div className="card">sdf</div>
+                            <div className="v-line-sm"></div>
+                            <div className="v-line-sm"></div>
+                            <div className="v-line-sm"></div>
+                        </div>
+                        <div className="row row1">
+                                <div className="card card1">sdf</div>
+                                <div className="card card1">sdf</div>
+                                <div className="card card1">sdf</div>
+                        </div>
+                        <div className="row">
+                            <div className="col-md-4 row2">
+                            <div className="v-line-sm"></div>
+                            <div className="card card1">
+
+                            </div>
+                            </div>
+                            <div className="col-md-4 row2">
+                            <div className="v-line-sm"></div>
+                            <div className="card card1">
+
+                            </div>
+                            </div>
+                            <div className="col-md-4 row2">
+                            <div className="v-line-sm"></div>
+                            <div className="card card1">
+
+                            </div>
                             </div>
                         </div>
-                        <div className="verticalLine"></div>
-                        <div className="horizontalLine"></div>
-                        <div className="row">
-                            <div className="col">
-                                <div className="card">sdf</div>
-                                <div className="card">sdf</div>
-                                <div className="card">sdf</div>
-                                <div className="card">sdf</div>
-                            </div>
-                        </div>
-                        <div className="verticalLine"></div>
-                        <div className="horizontalLine"></div>
-                        <div className="row">
-                            <div className="col">
-                                <div className="card">sdf</div>
-                                <div className="card">sdf</div>
-                                <div className="card">sdf</div>
-                                <div className="card">sdf</div>
-                            </div>
-                        </div>
-                        <div className="verticalLine"></div>
-                        <div className="horizontalLine"></div>
-                        <div className="row">
-                            <div className="col">
-                                <div className="card">sdf</div>
-                                <div className="card">sdf</div>
-                                <div className="card">sdf</div>
-                            </div>
-                        </div>
+                         
                     </div>
                 </div>
             </div>
