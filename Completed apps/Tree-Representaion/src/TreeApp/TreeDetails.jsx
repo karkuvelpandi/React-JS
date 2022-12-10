@@ -16,15 +16,24 @@ const TreeDetails = (props) => {
        if(name=='Jas John'){
         setCeoClick(!ceoClick)
        }
-       else if(name=="Leo Six"){
-        setCtoClick(!ctoClick)
+       if(ceoClick){
+           if(name=="Leo Six"){
+            setCtoClick(!ctoClick)
+           }
+           else if(name=="Diala Sho"){
+            setCboClick(!cboClick)
+           }
+           else if(name=="Tab Han"){
+            setCfoClick(!cfoClick)
+           }
        }
-       else if(name=="Diala Sho"){
-        setCboClick(!cboClick)
+       else if(!ceoClick){
+        setCtoClick(false)
+        setCboClick(false)
+        setCfoClick(false)
        }
-       else if(name=="Tab Han"){
-        setCfoClick(!cfoClick)
-       }
+      
+      
        
     }
 
@@ -66,7 +75,7 @@ const TreeDetails = (props) => {
                                 {data.map((dat) => {
                                     if (dat.id === 101) {
                                         return <>
-                                            <center> <img src={dat.image} height="80px" style={{ borderRadius: "50%", margin: 0, padding: 0 }} alt="no-data" /> <br />
+                                            <center onClick={teamBindHandler.bind(this,dat.name)}> <img src={dat.image} height="80px" style={{ borderRadius: "50%", margin: 0, padding: 0 }} alt="no-data" /> <br />
                                                 <h5 style={{ margin: 0, padding: 0 }}>{dat.name}</h5>
                                                 <p style={{ margin: 0, padding: 0, fontSize: "0.5rem" }}>{dat.designation}</p>
                                             </center>
@@ -94,7 +103,7 @@ const TreeDetails = (props) => {
                                     })}
                                 </div>
                                 <center>
-                                <div style={ctoClick?null:{display:"none"}}>
+                                <div style={(ctoClick && ceoClick)&&ctoClick?null:{display:"none"}}>
                                 <div className="v-line-sm"></div>
                                 <div className="card card1">
                                     {data.map((dat) => {
@@ -188,7 +197,7 @@ const TreeDetails = (props) => {
                                     })}
                                 </div>
                                 <center>
-                                <div style={cboClick?null:{display:"none"}}>
+                                <div style={cboClick && ceoClick?null:{display:"none"}}>
                                 <div className="v-line-sm"></div>
                                 <div className="card card1">
                                     {data.map((dat) => {
@@ -248,7 +257,7 @@ const TreeDetails = (props) => {
                                     })}
                                 </div>
                                 <center>
-                                <div style={cfoClick?null:{display:"none"}}>
+                                <div style={cfoClick && ceoClick?null:{display:"none"}}>
                                 <div className="v-line-xsm"></div>
                                 <div className="split-line-sm" ></div>
                                 <div className="row4" style={{ position: "relative" }}>

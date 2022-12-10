@@ -46,16 +46,17 @@ const TreeList = (props) => {
     return <>
         <div className="container-fluid mt-5">
             <div className="row">
+                <div className="col ">
+                <div className='form-group'>
                 <input
+                    className='form-control'
                     type="search"
                     value={searchName}
                     placeholder="Filter By Name"
                     onChange={getData}
-                    // onBlur={refresh}
-                    required
-                />
-                <input type="button" value='search' onClick={searchName === "" ? handleClick : filter.bind(this, searchName)} /><br />
-            </div>
+                    required />
+                <input type="button" className='btn btn-primary' value='search' onClick={searchName === "" ? handleClick : filter.bind(this, searchName)} /><br />
+            </div></div></div>
             <div className="row">
                 <div className="col-md-12">
                     {

@@ -24,3 +24,16 @@
    font-weight: 400;
    margin: 0;
 }
+
+.form-group{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+.form-control{
+   margin-right: 1rem;
+}
+.form-control:focus{
+    background: gold;
+    border:lime;
+ }
