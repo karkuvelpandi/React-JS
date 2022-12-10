@@ -1,16 +1,16 @@
 import { useState } from "react"
 import React from 'react'
-import { useEffect} from "react"
+import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 
 const RegForm = () => {
-   
+
   let [emailErr, setEmailErr] = useState(null)
   let [nameErr, SetNameErr] = useState(null)
   let [mobileErr, SetMobileErr] = useState(null)
   let [passwordErr, SetPasswordErr] = useState(null)
   let [conformPasswordErr, SetConformPasswordErr] = useState(null)
-  let[valid,setValid]=useState(false)
+  let [valid, setValid] = useState(false)
 
   let [userDetails, setUserDetails] = useState({
     name: "",
@@ -23,28 +23,28 @@ const RegForm = () => {
   let getData = (event) => {
     setUserDetails({ ...userDetails, [event.target.name]: event.target.value })
   }
- 
-  useEffect(()=>{
-  if(valid===true){
-    validateFun(userDetails)
-  }
-  },[userDetails])
+
+  useEffect(() => {
+    if (valid === true) {
+      validateFun(userDetails)
+    }
+  }, [userDetails])
 
   let submitHandler = (e) => {
     e.preventDefault()
     setValid(true)
-    let submit= validateFun(userDetails) 
-    if (submit===true){
+    let submit = validateFun(userDetails)
+    if (submit === true) {
       alert("Form submitted successfully")
-      
+
     }
   }
   let validateFun = (value) => {
     let name = value.name
     let email = value.email
-    let mobile =value.mobile
-    let password=value.password
-    let conformPassword=value.conformPassword
+    let mobile = value.mobile
+    let password = value.password
+    let conformPassword = value.conformPassword
 
     if (name === "") {
       SetNameErr("please enter name")
@@ -73,48 +73,45 @@ const RegForm = () => {
     else if (mobile.length === 10) {
       SetMobileErr("")
     }
-    if(!password){
+    if (!password) {
       SetPasswordErr("Please enter password")
     }
-    else if(!/^[A-Z]/.test(password)){
-     SetPasswordErr("Must have atleast 1 capital letter")
-    } 
-     else if(!/^(?=.*\d)/.test(password)){
-     SetPasswordErr("Must have atleast 1 number ")
+    if (!/^[A-Z]/.test(password)) {
+      SetPasswordErr("Must have atleast 1 capital letter")
     }
-    else if(password.length <4 || password.length>10){
+    if (!/^(?=.*\d)/.test(password)) {
+      SetPasswordErr("Must have atleast 1 number ")
+    }
+    else if (password.length < 4 || password.length > 10) {
       SetPasswordErr("Password requird min 4 to 10 characters")
     }
-    else{
+    else {
       SetPasswordErr("")
     }
-    if(!conformPassword){
+    if (!conformPassword) {
       SetConformPasswordErr("Please enter password")
     }
-    else if(password !==conformPassword){
+    else if (password !== conformPassword) {
       SetConformPasswordErr("Password does't match")
     }
-    else if(password ===conformPassword){
+    else if (password === conformPassword) {
       SetConformPasswordErr("")
     }
-   if(nameErr==="" && emailErr==="" &&mobileErr==="" &&passwordErr==="" &&conformPasswordErr===""){
-    return true
-   }
+    if (nameErr === "" && emailErr === "" && mobileErr === "" && passwordErr === "" && conformPasswordErr === "") {
+      return true
+    }
 
   }
 
 
 
   return <>
-    {/* <pre>{JSON.stringify(userDetails)}</pre>
-    <pre>{JSON.stringify(nameErr)}</pre>
-    <pre>{JSON.stringify(emailErr)}</pre>
-    <pre>{JSON.stringify(passwordErr)}</pre> */}
+
     <div className="container">
       <div className="row">
-   <div className="col-md-12">
+        <div className="col-md-12">
           <center><h2>Registration Form</h2></center>
-          <form  onSubmit={submitHandler}>
+          <form onSubmit={submitHandler}>
             <div className="form-group">
               <input type="text" className="form-control" name="name" onChange={getData} placeholder='Name' />
               <h6 className="text-danger">{nameErr}</h6>
@@ -128,11 +125,11 @@ const RegForm = () => {
               <h6 className="text-danger">{mobileErr}</h6>
             </div>
             <div className="form-group">
-              <input type="password" autoComplete="true"  className="form-control" name="password" onChange={getData} placeholder='Password' />
+              <input type="password" autoComplete="true" className="form-control" name="password" onChange={getData} placeholder='Password' />
               <h6 className="text-danger">{passwordErr}</h6>
             </div>
             <div className="form-group">
-              <input type="password" autoComplete="true"  className="form-control" name="conformPassword" onChange={getData} placeholder='Conform-Password' />
+              <input type="password" autoComplete="true" className="form-control" name="conformPassword" onChange={getData} placeholder='Conform-Password' />
               <h6 className="text-danger">{conformPasswordErr}</h6>
             </div>
             <input type="submit" value="Register" className='btn btn-success' />
