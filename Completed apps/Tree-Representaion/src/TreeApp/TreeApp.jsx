@@ -13,7 +13,7 @@ const TreeApp = () => {
    
     let updateOneEmp = (emp) => {
         setSelectedEmp(emp)
-        console.log(emp)
+         console.log("Detail sent...")
     }
     return <>
         <div className="container-fluid">

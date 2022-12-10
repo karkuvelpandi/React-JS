@@ -31,10 +31,7 @@ const TreeDetails = (props) => {
         setCtoClick(false)
         setCboClick(false)
         setCfoClick(false)
-       }
-      
-      
-       
+       } 
     }
 
     useEffect(() => {
@@ -57,7 +54,7 @@ const TreeDetails = (props) => {
                                         <li className="list-group-item"><b>Id : </b>{singleData.id}</li>
                                         <li className="list-group-item"><b>Designation : </b>{singleData.designation}</li>
                                         {singleData.id === 101 ? null : <li className="list-group-item"><b>Team : </b>{singleData.team}</li>}
-                                        <button className='btn btn-success' onClick={teamBindHandler.bind(this, singleData.name)}>Available Team</button>
+                               {singleData.id === 101 ?  <button className='btn btn-success' onClick={teamBindHandler.bind(this, singleData.name)}>Available Team</button>:null}        
                                     </ul>
                                 </div>
                             </div>
@@ -103,7 +100,7 @@ const TreeDetails = (props) => {
                                     })}
                                 </div>
                                 <center>
-                                <div style={(ctoClick && ceoClick)&&ctoClick?null:{display:"none"}}>
+                                <div style={(ctoClick && ceoClick)?null:{display:"none"}}>
                                 <div className="v-line-sm"></div>
                                 <div className="card card1">
                                     {data.map((dat) => {
