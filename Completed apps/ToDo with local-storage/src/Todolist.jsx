@@ -48,8 +48,8 @@ const Todolist = () => {
 
   return (
     <div className='container mt-5'>
-      <div className='row mx-auto'>
-        <div className='col-md-12'>
+      <div className='row mx-auto row1'>
+        <div className='col-md-8'>
 
           <div className='card border border-dark' >
             <div className='card-header bg-primary text-white'>
@@ -84,7 +84,7 @@ const Todolist = () => {
             <button className='btn btn-outline-info mr-3' value='Completed' onClick={(e) => SetSearch(e.target.value)
             }>Completed</button>
           </div>
-          {Object.keys(store).length > 0 ? (<table className='table table-hover'>
+          {Object.keys(store).length > 0 ? (<table className='table table-dark text-center'>
             <thead>
               <tr>
                 <th>I.D</th>
