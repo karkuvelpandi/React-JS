@@ -44,7 +44,7 @@ const TreeDetails = (props) => {
             <div className="row" style={{ display: "flex", justifyContent: "center"}}>
                <div className="row">
                 <div className="col-md-12">
-                     <h1 style={{color:'whitesmoke',textShadow:"5px 5px black"}}>Employee Organization Chart</h1>
+                     <h1 style={{color:'whitesmoke',textShadow:"5px 5px black" }}>Employee Organization Chart</h1>
                 
                     {
                         Object.keys(singleData).length > 0 ? <>
