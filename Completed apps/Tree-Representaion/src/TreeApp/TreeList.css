@@ -1,10 +1,13 @@
 .listCard{
     border:2px solid lightgray;
     border-radius: 7px;
-    /* display: flex; */
     flex-direction: row;
     width:365px;
     cursor:pointer;
+}
+.listCard:hover{
+     background-color: #2b3e4e;
+     color: white;
 }
 .listImg{
     height:50px ;

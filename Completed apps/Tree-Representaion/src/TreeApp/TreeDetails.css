@@ -1,9 +1,17 @@
 .detailImage{
       max-height: 200px;
       min-height: 50px;
+      height: 140px;
       border-radius: 50%;
       border:1px double black;
       box-shadow: 8px 8px 8px gray,inset 8px 8px 8px gray;
+      margin-left: 15px;
+}
+.detailImage:hover{
+    box-shadow: 8px 8px 8px black,inset 8px 8px 8px black;
+    position: relative;
+    transition: 0.5s ease;
+    zoom: 105%;
 }
 #detailsC-head{
     background: transparent;
@@ -11,9 +19,13 @@
      border-top-right-radius:45px ;
 }
 .detailCard{
-         background: linear-gradient(45deg,rgb(152, 95, 95),rgb(202, 186, 186));
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 500px;
+    justify-content: space-between;
+    align-items: center;
     border: 1px solid blue;
-    border-radius: 10%;
 }
 
 .v-line-sm{

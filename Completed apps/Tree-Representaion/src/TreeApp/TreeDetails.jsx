@@ -33,20 +33,17 @@ const TreeDetails = (props) => {
         setSingleData(props.singleData)
     }, [props])
     return <>
-    <pre style={{color:"white"}}>{JSON.stringify(ceoClick)}</pre>
-        {/* <pre>{JSON.stringify(data)}</pre>
-        <pre>{JSON.stringify(singleData)}</pre> */}
         <div className="container-fluid mt-5" >
-            <div className="row">
+            <div className="row" style={{display:"flux",justifyContent:"center",}}>
                 <div className="col-md-4">
                     {
                         Object.keys(singleData).length > 0 ? <>
                             <div className="card detailCard">
-                                <div className="card-header" id="detailsC-head">
+                                <div id="detailsC-head">
                                     <center><img src={singleData.image} className="detailImage" alt="no-pic" /></center>
                                 </div>
-                                <div className="card-body">
-                                    <ul className="list-group">
+                                <div >
+                                    <ul className="list-group" style={{minWidth:"300px"}}>
                                         <li className="list-group-item"><b>Name : </b>{singleData.name}</li>
                                         <li className="list-group-item"><b>Id : </b>{singleData.id}</li>
                                         <li className="list-group-item"><b>Designation : </b>{singleData.designation}</li>
@@ -62,7 +59,7 @@ const TreeDetails = (props) => {
 
             </div>
             {data.length > 0 ? <>
-                <div className="row" >
+                <div className="row mt-5" >
                     <div className="col-md-12">
                         <div className="row row-flex" style={ceoClick?null:{display:"none"}}>
                             <div className="card1">
