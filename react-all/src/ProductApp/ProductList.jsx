@@ -26,17 +26,14 @@ let ProductList = (props) => {
     };
 
     let filter = () => {
-       
         if (searchName !== "") {
             const result = foundUser.filter((singleData) => {
-
                 return singleData.firstName.toLowerCase().startsWith(searchName.toLowerCase())
             })
             setFoundUser(result)
-        }
-       
-       }
-        
+        }  
+    }
+    
     //  let requiredField=()=>{
     //     if (searchName == "") {
     //         return setErr(!true)

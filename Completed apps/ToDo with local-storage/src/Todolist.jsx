@@ -49,7 +49,7 @@ const Todolist = () => {
   return (
     <div className='container mt-5'>
       <div className='row mx-auto'>
-        <div className='col-md-8'>
+        <div className='col-md-12'>
 
           <div className='card border border-dark' >
             <div className='card-header bg-primary text-white'>
