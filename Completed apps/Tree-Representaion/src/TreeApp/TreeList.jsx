@@ -27,11 +27,11 @@ const TreeList = (props) => {
         setSearchName(keyword)
     };
 
-    let filter = () => {
+    let filterHandler = () => {
         if(!searchName){setFoundUser(employees)}
         if (searchName !== "") {
             const result = foundUser.filter((singleData) => {
-                return (singleData.name && singleData.designation && singleData.id) .toLowerCase().startsWith(searchName.toLowerCase())
+                return (singleData.name.toLowerCase().includes(searchName.toLowerCase()) || singleData.designation.toLowerCase().includes(searchName.toLowerCase()))
             })
             setFoundUser(result)
         }
@@ -39,7 +39,7 @@ const TreeList = (props) => {
 
     let refresh = () => {
         const searchName = ""
-        if (searchName == "") {
+        if (searchName === "") {
             setFoundUser(employees)
         }
     };
@@ -51,11 +51,12 @@ const TreeList = (props) => {
                 <input
                     className='form-control'
                     type="search"
-                    value={searchName}
+                    // value={searchName}
                     placeholder="Filter By Name"
                     onChange={getData}
+                    onFocus={refresh}
                     required />
-                <input type="button" className='btn btn-primary' value='search' onClick={searchName === "" ? handleClick : filter.bind(this, searchName)} /><br />
+                <input type="button" className='btn btn-primary' value='search' onClick={searchName === "" ? handleClick : filterHandler.bind(this, searchName)} /><br />
             </div></div></div>
             <div className="row">
                 <div className="col-md-12">
