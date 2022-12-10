@@ -5,10 +5,12 @@
     width:365px;
     cursor:pointer;
 }
+
 .listCard:hover{
      background-color: #473349;
      color: white;
 }
+
 .listCard:active{
      background-color: #7e4e82;
      color: white;
@@ -21,10 +23,11 @@
     margin-top:12px;
     margin-left: 5px;
 }
+
 .phead{
    font-weight: 700;
-
 }
+
 .pcontent{
    font-weight: 400;
    margin: 0;
@@ -35,13 +38,16 @@
     justify-content: space-between;
     padding: 0;
 }
+
 .form-control{
    margin-right: 1rem;
 }
+
 .form-control:focus{
     background: #fdb2b2;
     border:lime;
  }
+ 
  .btn:hover{
     background-color: #333;
  }

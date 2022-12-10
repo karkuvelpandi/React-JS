@@ -4,6 +4,7 @@ import TreeDetails from './TreeDetails'
 import Data from './data.json'
 import { useState } from 'react'
 import { useEffect } from 'react'
+
 const TreeApp = () => {
     let [data, setData] = useState([])
     let [selectedEmp, setSelectedEmp] = useState({})
@@ -26,7 +27,6 @@ const TreeApp = () => {
                 </div>
             </div>
         </div>
-
     </>
 }
 
