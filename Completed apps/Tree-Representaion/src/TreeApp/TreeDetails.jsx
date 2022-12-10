@@ -5,25 +5,30 @@ import './TreeDetails.css'
 
 const TreeDetails = (props) => {
 
-    let [data, setData] = useState([])
+    let [empData, setEmpData] = useState([])
     let [singleData, setSingleData] = useState([])
     let [ceoClick, setCeoClick] = useState(false)
     let [ctoClick, setCtoClick] = useState(false)
     let [cboClick, setCboClick] = useState(false)
     let [cfoClick, setCfoClick] = useState(false)
 
+    useEffect(() => {
+        setEmpData(props.wholeData)
+        setSingleData(props.singleData)
+    }, [props])
+
     let teamBindHandler = (name) => {
-        if (name == 'Jas John') {
+        if (name === 'Jas John') {
             setCeoClick(!ceoClick)
         }
         if (ceoClick) {
-            if (name == "Leo Six") {
+            if (name === "Leo Six") {
                 setCtoClick(!ctoClick)
             }
-            else if (name == "Diala Sho") {
+            else if (name === "Diala Sho") {
                 setCboClick(!cboClick)
             }
-            else if (name == "Tab Han") {
+            else if (name === "Tab Han") {
                 setCfoClick(!cfoClick)
             }
         }
@@ -33,11 +38,6 @@ const TreeDetails = (props) => {
             setCfoClick(false)
         }
     }
-
-    useEffect(() => {
-        setData(props.wholeData)
-        setSingleData(props.singleData)
-    }, [props])
 
     return <>
         <div className="container-fluid mt-5" >
@@ -53,7 +53,7 @@ const TreeDetails = (props) => {
                                     <center key={singleData.id}><img src={singleData.image} className="detailImage" alt="no-pic" /></center>
                                 </div>
                                 <div >
-                                    <ul className="list-group" style={{ minWidth: "300px" }}>
+                                    <ul  className="list-group" style={{ minWidth: "300px" }}>
                                         <li className="list-group-item"><b>Name : </b>{singleData.name}</li>
                                         <li className="list-group-item"><b>Id : </b>{singleData.id}</li>
                                         <li className="list-group-item"><b>Designation : </b>{singleData.designation}</li>
@@ -67,12 +67,12 @@ const TreeDetails = (props) => {
                 </div></div>
             </div>
 
-            {data.length > 0 ? <>
+            {empData.length > 0 ? <>
                 <div className="row mt-5" >
                     <div className="col-md-12">
                         <div className="row row-flex" style={ceoClick ? null : { display: "none" }}>
                             <div className="card1 card11">
-                                {data.map((dat) => {
+                                {empData.map((dat)=>{
                                     if (dat.id === 101) {
                                         return <>
                                             <center key={dat.id} onClick={teamBindHandler.bind(this, dat.name)}> <img src={dat.image} height="80px" style={{ borderRadius: "50%", margin: 0, padding: 0 }} alt="no-data" /> <br />
@@ -81,7 +81,8 @@ const TreeDetails = (props) => {
                                             </center>
                                         </>
                                     }
-                                })}
+                                   })
+                                   }
                             </div>
                         </div>
                         <div className="v-line-sm" style={ceoClick ? null : { display: "none" }} ></div>
@@ -91,7 +92,7 @@ const TreeDetails = (props) => {
                             <div className="col-md-4 row5" >
                                 <div className="v-line-sm" style={ceoClick ? null : { display: "none" }}></div>
                                 <div className="card card1 card11" style={ceoClick ? null : { display: "none" }}>
-                                    {data.map((dat) => {
+                                    {empData.map((dat) => {
                                         if (dat.id === 102) {
                                             return <>
                                                 <center key={dat.id} onClick={teamBindHandler.bind(this, dat.name)}> <img src={dat.image} height="80px" style={{ borderRadius: "50%", margin: 0, padding: 0 }} alt="no-data" /> <br />
@@ -106,7 +107,7 @@ const TreeDetails = (props) => {
                                     <div style={(ctoClick && ceoClick) ? null : { display: "none" }}>
                                         <div className="v-line-sm"></div>
                                         <div className="card card1 ">
-                                            {data.map((dat) => {
+                                            {empData.map((dat) => {
                                                 if (dat.id === 108) {
                                                     return <>
                                                         <center key={dat.id}> <img src={dat.image} height="80px" style={{ borderRadius: "50%", margin: 0, padding: 0 }} alt="no-data" /> <br />
@@ -121,7 +122,7 @@ const TreeDetails = (props) => {
                                         <div className="split-line-sm" ></div>
                                         <div className="row4" style={{ position: "relative" }}>
                                             <div className="card card1">
-                                                {data.map((dat) => {
+                                                {empData.map((dat) => {
                                                     if (dat.id === 106) {
                                                         return <>
                                                             <center key={dat.id}> <img src={dat.image} height="80px" style={{ borderRadius: "50%", margin: 0, padding: 0 }} alt="no-data" /> <br />
@@ -133,7 +134,7 @@ const TreeDetails = (props) => {
                                                 })}
                                             </div>
                                             <div className="card card1">
-                                                {data.map((dat) => {
+                                                {empData.map((dat) => {
                                                     if (dat.id === 107) {
                                                         return <>
                                                             <center key={dat.id}> <img src={dat.image} height="80px" style={{ borderRadius: "50%", margin: 0, padding: 0 }} alt="no-data" /> <br />
@@ -149,7 +150,7 @@ const TreeDetails = (props) => {
                                             <div >
                                                 <div className="v-line-sm"></div>
                                                 <div className="card card1">
-                                                    {data.map((dat) => {
+                                                    {empData.map((dat) => {
                                                         if (dat.id === 105) {
                                                             return <>
                                                                 <center key={dat.id}> <img src={dat.image} height="80px" style={{ borderRadius: "50%", margin: 0, padding: 0 }} alt="no-data" /> <br />
@@ -164,7 +165,7 @@ const TreeDetails = (props) => {
                                             <div>
                                                 <div className="v-line-sm"></div>
                                                 <div className="card card1">
-                                                    {data.map((dat) => {
+                                                    {empData.map((dat) => {
                                                         if (dat.id === 109) {
                                                             return <>
                                                                 <center key={dat.id}> <img src={dat.image} height="80px" style={{ borderRadius: "50%", margin: 0, padding: 0 }} alt="no-data" /> <br />
@@ -185,7 +186,7 @@ const TreeDetails = (props) => {
                             <div className="col-md-4 row5">
                                 <div className="v-line-sm" style={ceoClick ? null : { display: "none" }}></div>
                                 <div className="card card1 card11" style={ceoClick ? null : { display: "none" }}>
-                                    {data.map((dat) => {
+                                    {empData.map((dat) => {
                                         if (dat.id === 111) {
                                             return <>
                                                 <center key={dat.id} onClick={teamBindHandler.bind(this, dat.name)}> <img src={dat.image} height="80px" style={{ borderRadius: "50%", margin: 0, padding: 0 }} alt="no-data" /> <br />
@@ -200,7 +201,7 @@ const TreeDetails = (props) => {
                                     <div style={cboClick && ceoClick ? null : { display: "none" }}>
                                         <div className="v-line-sm"></div>
                                         <div className="card card1">
-                                            {data.map((dat) => {
+                                            {empData.map((dat) => {
                                                 if (dat.id === 104) {
                                                     return <>
                                                         <center key={dat.id}> <img src={dat.image} height="80px" style={{ borderRadius: "50%", margin: 0, padding: 0 }} alt="no-data" /> <br />
@@ -215,7 +216,7 @@ const TreeDetails = (props) => {
                                         <div className="split-line-sm" ></div>
                                         <div className="row4" style={{ position: "relative" }}>
                                             <div className="card card1">
-                                                {data.map((dat) => {
+                                                {empData.map((dat) => {
                                                     if (dat.id === 110) {
                                                         return <>
                                                             <center key={dat.id}> <img src={dat.image} height="80px" style={{ borderRadius: "50%", margin: 0, padding: 0 }} alt="no-data" /> <br />
@@ -227,7 +228,7 @@ const TreeDetails = (props) => {
                                                 })}
                                             </div>
                                             <div className="card card1">
-                                                {data.map((dat) => {
+                                                {empData.map((dat) => {
                                                     if (dat.id === 112) {
                                                         return <>
                                                             <center key={dat.id}> <img src={dat.image} height="80px" style={{ borderRadius: "50%", margin: 0, padding: 0 }} alt="no-data" /> <br />
@@ -246,7 +247,7 @@ const TreeDetails = (props) => {
                             <div className="col-md-4 row5">
                                 <div className="v-line-sm" style={ceoClick ? null : { display: "none" }}></div>
                                 <div className="card card1 card11" style={ceoClick ? null : { display: "none" }}>
-                                    {data.map((dat) => {
+                                    {empData.map((dat) => {
                                         if (dat.id === 103) {
                                             return <>
                                                 <center key={dat.id} onClick={teamBindHandler.bind(this, dat.name)}> <img src={dat.image} height="80px" style={{ borderRadius: "50%", margin: 0, padding: 0 }} alt="no-data" /> <br />
@@ -263,7 +264,7 @@ const TreeDetails = (props) => {
                                         <div className="split-line-sm" ></div>
                                         <div className="row4" style={{ position: "relative" }}>
                                             <div className="card card1">
-                                                {data.map((dat) => {
+                                                {empData.map((dat) => {
                                                     if (dat.id === 113) {
                                                         return <>
                                                             <center key={dat.id}> <img src={dat.image} height="80px" style={{ borderRadius: "50%", margin: 0, padding: 0 }} alt="no-data" /> <br />
@@ -275,7 +276,7 @@ const TreeDetails = (props) => {
                                                 })}
                                             </div>
                                             <div className="card card1">
-                                                {data.map((dat) => {
+                                                {empData.map((dat) => {
                                                     if (dat.id === 114) {
                                                         return <>
                                                             <center key={dat.id}> <img src={dat.image} height="80px" style={{ borderRadius: "50%", margin: 0, padding: 0 }} alt="no-data" /> <br />
