@@ -41,8 +41,11 @@ const TreeDetails = (props) => {
 
     return <>
         <div className="container-fluid mt-5" >
-            <div className="row" style={{ display: "flex", justifyContent: "center", }}>
-                <div className="col-md-4">
+            <div className="row" style={{ display: "flex", justifyContent: "center"}}>
+               <div className="row">
+                <div className="col-md-12">
+                     <h1 style={{color:'whitesmoke',textShadow:"5px 5px black"}}>Employee Organization Chart</h1>
+                
                     {
                         Object.keys(singleData).length > 0 ? <>
                             <div className="card detailCard" >
@@ -61,10 +64,9 @@ const TreeDetails = (props) => {
                             </div>
                         </> : <div style={{ height: "340px" }}><h3 id="clickNote" >&#128072;Select Employee...<p>Click CEO to view Organization chart</p></h3></div>
                     }
-
-                </div>
-
+                </div></div>
             </div>
+
             {data.length > 0 ? <>
                 <div className="row mt-5" >
                     <div className="col-md-12">
