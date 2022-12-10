@@ -51,7 +51,7 @@ const TreeList = (props) => {
                 <input
                     className='form-control'
                     type="search"
-                    placeholder="Filter By Name"
+                    placeholder="Filter By Name/Role"
                     onChange={getData}
                     onFocus={refresh}
                     required />
