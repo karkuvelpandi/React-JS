@@ -1,0 +1,112 @@
+.detailImage{
+      max-height: 200px;
+      min-height: 50px;
+      height: 140px;
+      border-radius: 50%;
+      border:1px double black;
+      box-shadow: 8px 8px 8px gray,inset 8px 8px 8px gray;
+      margin-left: 15px;
+}
+.detailImage:hover{
+    box-shadow: 8px 8px 8px black,inset 8px 8px 8px black;
+    position: relative;
+    transition: 0.5s ease;
+    zoom: 105%;
+}
+#detailsC-head{
+    background: transparent;
+     border-top-left-radius: 45px;
+     border-top-right-radius:45px ;
+}
+.detailCard{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 500px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid blue;
+}
+
+.v-line-sm{
+    border:1px dashed red;
+       width: 2px;
+       height: 40px;
+       margin:2rem auto;
+       margin-top: 0;
+       margin-bottom: 0;
+       
+}
+.v-line-xsm{
+    border:1px dashed red;
+       width: 2px;
+       height: 20px;
+       margin:2rem auto;
+       margin-top: 0;
+       margin-bottom: 0;
+       
+}
+.h-line-lg{
+    position: relative;
+    border:1px dashed red;
+    max-width: 740px;
+    min-width: 50px;
+    height: 2px;
+    margin:2rem auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.split-line-sm{
+    width: 90px;
+    height: 20px;
+    border-top:1px dashed red;
+    border-left:1px dashed red ;
+    border-right:1px dashed red;
+}
+
+
+.card1{
+    /* display: flex; */
+    background-color: rgba(165, 42, 42, 0.42);
+    color:white;
+    align-items: center;
+     min-height: 100px;
+     max-height: 130px;
+     min-width: 120px;
+    width: 100px;
+    border: 1px solid rgb(0, 255, 30);
+}
+.row-flex{
+    display: flex;
+    justify-content: center;
+}
+.row1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.row2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+}
+.row3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:row;
+}
+.row4{
+    height: 120px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+justify-content: space-evenly;
+
+}
+.row5{
+    display: flex;  
+    align-items: center;
+    flex-direction:column;
+}

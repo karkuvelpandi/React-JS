@@ -11,9 +11,6 @@ const TreeDetails = (props) => {
     let [ctoClick, setCtoClick] = useState(false)
     let [cboClick, setCboClick] = useState(false)
     let [cfoClick, setCfoClick] = useState(false)
-    let [pmclick,setPmclick]=useState(false)
-    let [hrhClick,setHrhClick]=useState(false)
-    
 
     useEffect(() => {
         setEmpData(props.wholeData)
@@ -28,27 +25,10 @@ const TreeDetails = (props) => {
             if (name === "Leo Six") {
                 setCtoClick(!ctoClick)
             }
-            if(ctoClick){
-                if(name==="Maria Miao"){
-                    setPmclick(!pmclick)
-                }
-            }
-            else if(!ctoClick){
-                setPmclick(false)
-            }   
-        }
-        if(ceoClick){
-             if (name === "Diala Sho") {
+            else if (name === "Diala Sho") {
                 setCboClick(!cboClick)
             }
-            if(cboClick){
-                if(name==="Daniel Zhou"){
-                    setHrhClick(!hrhClick)
-                }
-            }    
-        }
-        if(ceoClick){
-             if (name === "Tab Han") {
+            else if (name === "Tab Han") {
                 setCfoClick(!cfoClick)
             }
         }
@@ -124,13 +104,13 @@ const TreeDetails = (props) => {
                                     })}
                                 </div>
                                 <center>
-                                    <div >
-                                        <div className="v-line-sm"style={(ctoClick && ceoClick) ? null : { display: "none" }}></div>
-                                        <div className="card card1 "style={(ctoClick && ceoClick) ? null : { display: "none" }} >
+                                    <div style={(ctoClick && ceoClick) ? null : { display: "none" }}>
+                                        <div className="v-line-sm"></div>
+                                        <div className="card card1 ">
                                             {empData.map((dat) => {
                                                 if (dat.id === 108) {
                                                     return <>
-                                                        <center key={dat.id} onClick={teamBindHandler.bind(this, dat.name)}> <img src={dat.image} height="80px" style={{ borderRadius: "50%", margin: 0, padding: 0 }} alt="no-data" /> <br />
+                                                        <center key={dat.id}> <img src={dat.image} height="80px" style={{ borderRadius: "50%", margin: 0, padding: 0 }} alt="no-data" /> <br />
                                                             <h5 style={{ margin: 0, padding: 0 }}>{dat.name}</h5>
                                                             <p style={{ margin: 0, padding: 0, fontSize: "0.5rem" }}>{dat.designation}</p>
                                                         </center>
@@ -138,10 +118,10 @@ const TreeDetails = (props) => {
                                                 }
                                             })}
                                         </div>
-                                        <div className="v-line-xsm"style={(ctoClick && ceoClick && pmclick) ? null : { display: "none" }}></div>
-                                        <div className="split-line-sm"style={(ctoClick && ceoClick && pmclick) ? null : { display: "none" }} ></div>
-                                        <div className="row4" style={(ctoClick && ceoClick && pmclick) ? { position: "relative" } : { display: "none" }}>
-                                            <div className="card card1" >
+                                        <div className="v-line-xsm"></div>
+                                        <div className="split-line-sm" ></div>
+                                        <div className="row4" style={{ position: "relative" }}>
+                                            <div className="card card1">
                                                 {empData.map((dat) => {
                                                     if (dat.id === 106) {
                                                         return <>
@@ -168,8 +148,8 @@ const TreeDetails = (props) => {
                                         </div>
                                         <div style={{ display: "flex", gap: "2rem", position: "relative" }}>
                                             <div >
-                                                <div className="v-line-sm" style={(ctoClick && ceoClick && pmclick) ? null : { display: "none" }}></div>
-                                                <div className="card card1" style={(ctoClick && ceoClick && pmclick) ? null : { display: "none" }}>
+                                                <div className="v-line-sm"></div>
+                                                <div className="card card1">
                                                     {empData.map((dat) => {
                                                         if (dat.id === 105) {
                                                             return <>
@@ -183,8 +163,8 @@ const TreeDetails = (props) => {
                                                 </div>
                                             </div>
                                             <div>
-                                                <div className="v-line-sm"style={(ctoClick && ceoClick && pmclick) ? null : { display: "none" }}></div>
-                                                <div className="card card1"style={(ctoClick && ceoClick && pmclick) ? null : { display: "none" }}>
+                                                <div className="v-line-sm"></div>
+                                                <div className="card card1">
                                                     {empData.map((dat) => {
                                                         if (dat.id === 109) {
                                                             return <>
@@ -218,13 +198,13 @@ const TreeDetails = (props) => {
                                     })}
                                 </div>
                                 <center>
-                                    <div>
-                                        <div className="v-line-sm"  style={cboClick && ceoClick ? null : { display: "none" }}></div>
-                                        <div className="card card1"  style={cboClick && ceoClick ? null : { display: "none" }}>
+                                    <div style={cboClick && ceoClick ? null : { display: "none" }}>
+                                        <div className="v-line-sm"></div>
+                                        <div className="card card1">
                                             {empData.map((dat) => {
                                                 if (dat.id === 104) {
                                                     return <>
-                                                        <center key={dat.id} onClick={teamBindHandler.bind(this, dat.name)}> <img src={dat.image} height="80px" style={{ borderRadius: "50%", margin: 0, padding: 0 }} alt="no-data" /> <br />
+                                                        <center key={dat.id}> <img src={dat.image} height="80px" style={{ borderRadius: "50%", margin: 0, padding: 0 }} alt="no-data" /> <br />
                                                             <h5 style={{ margin: 0, padding: 0 }}>{dat.name}</h5>
                                                             <p style={{ margin: 0, padding: 0, fontSize: "0.5rem" }}>{dat.designation}</p>
                                                         </center>
@@ -232,9 +212,9 @@ const TreeDetails = (props) => {
                                                 }
                                             })}
                                         </div>
-                                        <div className="v-line-xsm"  style={cboClick && ceoClick && hrhClick ? null : { display: "none" }}></div>
-                                        <div className="split-line-sm"  style={cboClick && ceoClick && hrhClick ? null : { display: "none" }} ></div>
-                                        <div className="row4"  style={cboClick && ceoClick && hrhClick ? { position: "relative" } : { display: "none" }}>
+                                        <div className="v-line-xsm"></div>
+                                        <div className="split-line-sm" ></div>
+                                        <div className="row4" style={{ position: "relative" }}>
                                             <div className="card card1">
                                                 {empData.map((dat) => {
                                                     if (dat.id === 110) {

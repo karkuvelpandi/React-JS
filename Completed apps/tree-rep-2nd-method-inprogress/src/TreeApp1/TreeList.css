@@ -1,0 +1,39 @@
+.listCard{
+    border:2px solid lightgray;
+    border-radius: 7px;
+    flex-direction: row;
+    width:365px;
+    cursor:pointer;
+}
+.listCard:hover{
+     background-color: #2b3e4e;
+     color: white;
+}
+.listImg{
+    height:50px ;
+    border: 1px solid #333;
+    border-radius: 25%;
+    margin-top:12px;
+    margin-left: 5px;
+}
+.phead{
+   font-weight: 700;
+
+}
+.pcontent{
+   font-weight: 400;
+   margin: 0;
+}
+
+.form-group{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+.form-control{
+   margin-right: 1rem;
+}
+.form-control:focus{
+    background: gold;
+    border:lime;
+ }

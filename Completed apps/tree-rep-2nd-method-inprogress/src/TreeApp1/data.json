@@ -1,0 +1,95 @@
+
+  [  {
+        "id": 101,
+        "name": "Jas John",
+        "designation": "CEO",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk1Y0DxrNiZSOOAbwl4bKGsomQG-B5Iq58Wbd-qmMFt_V_6moy6s_l9JR5X4DTCp88rxU&usqp=CAU",
+        "team": [{
+            "id": 102,
+            "name": "Leo Six",
+            "designation": "Chief Technology Officer",
+            "image": "https://randomuser.me/api/portraits/men/83.jpg",
+            "team": [ {
+                "id": 108,
+                "name": "Maria Miao",
+                "designation": "Project Manager",
+                "image": "https://randomuser.me/api/portraits/women/22.jpg",
+                "team": [{
+                    "id": 107,
+                    "name": "Lennis Chan",
+                    "designation": "Team Lead",
+                    "image": "https://randomuser.me/api/portraits/men/30.jpg",
+                    "team": [{
+                        "id": 109,
+                        "name": "Miku Ching",
+                        "designation": "Developer",
+                        "image": "https://randomuser.me/api/portraits/men/90.jpg",
+                        "team": "Lennis Chan"
+                    }]
+                },
+                {
+                    "id": 106,
+                    "name": "Derek Hu",
+                    "designation": "Team Lead",
+                    "image": "https://randomuser.me/api/portraits/men/44.jpg",
+                    "team": [ {
+                        "id": 105,
+                        "name": "Patik Wang",
+                        "designation": "Developer",
+                        "image": "https://randomuser.me/api/portraits/men/32.jpg",
+                        "team": "Derek Hu"
+                    }
+                    ]
+                }]
+            }
+           ]
+        },
+        {
+            "id": 111,
+            "name": "Diala Sho",
+            "designation": "Chief Bussiness Officer",
+            "image": "https://randomuser.me/api/portraits/women/68.jpg",
+            "team": [{
+                "id": 104,
+                "name": "Daniel Zhou",
+                "designation": "Head-Human Resourse",
+                "image": "https://randomuser.me/api/portraits/men/76.jpg",
+                "team": [{
+                    "id": 110,
+                    "name": "Shi Ten",
+                    "designation": "HR",
+                    "image": "https://randomuser.me/api/portraits/men/43.jpg",
+                    "team": "Daniel Zhou"
+                },
+                {
+                    "id": 112,
+                    "name": "Shan Mong",
+                    "designation": "HR",
+                    "image": "https://randomuser.me/api/portraits/men/97.jpg",
+                    "team": "Daniel Zhou"
+                }]
+            }]
+        },
+        {
+            "id": 103,
+            "name": "Tab Han",
+            "designation": "Chief Financial Officer",
+            "image": "https://randomuser.me/api/portraits/men/46.jpg",
+            "team": [{
+                "id": 113,
+                "name": "John Tom",
+                "designation": "Treasurer",
+                "image": "https://randomuser.me/api/portraits/men/34.jpg",
+                "team": "Tab Han"
+            },
+            {
+                "id": 114,
+                "name": "Sandeep Sah",
+                "designation": "Auditor",
+                "image": "https://randomuser.me/api/portraits/men/69.jpg",
+                "team": "Tab Han"
+            }]
+        } 
+        ]
+    }    
+  ]
