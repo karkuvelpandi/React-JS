@@ -16,6 +16,9 @@ const Todolist = () => {
   const [store, setStore] = useState(getLocalDate())
   const [search, SetSearch] = useState('')
   const [disable, SetDisable] = useState(false)
+  const [editFlag, setEditflag] = useState(false)
+  // const [selectedTask, setSelectedTask] = useState({ todo: '', status: '', id: '' })
+
   const changehandler = (e) => {
     setFormvalues({ ...formvalues, [e.target.name]: e.target.value })
   }
@@ -31,6 +34,7 @@ const Todolist = () => {
 
     setFormvalues({ todo: '', status: 'Pending' })
     SetDisable(false)
+    setEditflag(false)
   }
   const deletehandler = (indexvalue) => {
     const filteredstore = store.filter((elem, index) => index !== indexvalue)
@@ -44,6 +48,7 @@ const Todolist = () => {
       todo: editselector.todo,
     })
     SetDisable(true)
+    setEditflag(true)
   }
 
   return (
@@ -62,7 +67,9 @@ const Todolist = () => {
                     placeholder='Enter Todo....' />
                 </div>
                 <div id="submit-button">
-                  <button className='btn btn-info' type='submit'>Add</button>
+                  {
+                    editFlag ? <button className='btn btn-success' onClick={edithandler} type='submit'>Edit</button> : <button className='btn btn-info' onClick={submithandler} type='submit'>Add</button>
+                  }
                   {disable ? <div className='form-group' style={{ display: "inline-block" }}>
                     <select name='status' onChange={changehandler} className='form-control-lg'>
                       <option>Select Status</option>
