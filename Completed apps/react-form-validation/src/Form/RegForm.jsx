@@ -110,7 +110,7 @@ const RegForm = () => {
     <div className="container">
       <div className="row">
         <div className="col-md-12">
-          <center><h2>Registration Form</h2></center>
+          <center><h2 className="h1">Registration Form</h2></center>
           <form onSubmit={submitHandler}>
             <div className="form-group">
               <input type="text" className="form-control" name="name" onChange={getData} placeholder='Name' />
