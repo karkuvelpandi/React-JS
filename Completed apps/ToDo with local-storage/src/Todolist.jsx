@@ -57,7 +57,7 @@ const Todolist = () => {
         <div className='col-md-8'>
 
           <div className='card border border-dark' >
-            <div className='card-header bg-primary text-white'>
+            <div className='card-header bg-dark text-white'>
               <h1 className='text-center'>ToDo List</h1>
             </div>
             <div className='card-body'>
@@ -85,10 +85,10 @@ const Todolist = () => {
           </div>
 
           <div className=' mt-5 mb-3 d-md-flex align-items-center justify-content-center'>
-            <button className='btn btn-outline-info mr-3' onClick={(e) => SetSearch(e.target.value)}>All tasks</button>
-            <button className='btn btn-outline-info mr-3' value='Pending'
+            <button className='btn btn-outline-dark mr-3' onClick={(e) => SetSearch(e.target.value)}>All tasks</button>
+            <button className='btn btn-outline-dark mr-3' value='Pending'
               onClick={(e) => SetSearch(e.target.value)}>Pending</button>
-            <button className='btn btn-outline-info mr-3' value='Completed' onClick={(e) => SetSearch(e.target.value)
+            <button className='btn btn-outline-dark mr-3' value='Completed' onClick={(e) => SetSearch(e.target.value)
             }>Completed</button>
           </div>
           {Object.keys(store).length > 0 ? (<table className='table table-dark text-center'>
