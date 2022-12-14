@@ -64,11 +64,11 @@ const TreeDetails = (props) => {
             <div className="row" style={{ display: "flex", justifyContent: "center"}}>
                <div className="row">
                 <div className="col-md-12">
-                     <h1 style={{color:'whitesmoke',textShadow:"5px 5px black" }}>Employee Organization Chart</h1>
+                     <h1 style={{color:'whitesmoke',textShadow:"5px 5px black",marginLeft:"250px" }}>Employee Organization Chart</h1>
                 
                     {
                         Object.keys(singleData).length > 0 ? <>
-                            <div className="card detailCard" >
+                            <div className="card detailCard" style={{marginLeft:"250px"}} >
                                 <div id="detailsC-head">
                                     <center key={singleData.id}><img src={singleData.image} className="detailImage" alt="no-pic" /></center>
                                 </div>
@@ -82,7 +82,7 @@ const TreeDetails = (props) => {
                                     </ul>
                                 </div>
                             </div>
-                        </> : <div style={{ height: "340px" }}><h3 id="clickNote" >&#128072;Select Employee...<p>Click CEO to view Organization chart</p></h3></div>
+                        </> : <div style={{ height: "340px" ,marginLeft:"250px"}}><h3 id="clickNote" >&#128072;Select Employee...<p>Click CEO to view Organization chart</p></h3></div>
                     }
                 </div></div>
             </div>
