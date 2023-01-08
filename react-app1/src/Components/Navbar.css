@@ -51,6 +51,7 @@
 .menu-icon{
     display: none;
 }
+
 @media screen and (max-width:960px){
     .nav-link-mobile{
         display: contents;
