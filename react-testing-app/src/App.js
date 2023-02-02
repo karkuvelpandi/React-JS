@@ -7,6 +7,7 @@ import Completed from './ToDo/Completed'
 import Book from './stateVSvariables/stateVSvariables'
 import HOCComp from './HOC Component/HOCComp'
 import UseMousePosition from './Cursor/UseMousePosition'
+import Download from './Download/Download.tsx'
 let App = () => {
   return <>
     <nav className='navbar navbar-dark bg-light navbar-expand-lg'>
@@ -16,7 +17,8 @@ let App = () => {
     <Router>
         <Book/>
         <HOCComp />
-        <UseMousePosition/>
+        <Download/>
+        
       <Routes>
         
         <Route path="/completed" element={<Completed />} />
