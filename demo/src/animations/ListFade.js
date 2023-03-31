@@ -1,42 +1,37 @@
-import React, { useEffect, useState } from "react";
-import "../App.css"
-
+import React, { useEffect, useState, useRef } from "react";
+import "../App.css";
+// import { useAutoAnimate } from "@formkit/auto-animate/react";
 import Data from "../data.json";
 function ListFade() {
   const [items, setItems] = useState([]);
-  const [clickedIndex, setClickedIndex] = useState(null);
-  const [fadeOut, setFadeOut] = useState(false);
-  // const [shrink, setShrink] = useState(false);
-  // const [deletedIndex, setDeletedIndex] = useState(null);
-
+  //  const [shrink,setShrink]=useState(false)
+  const element = useRef();
   useEffect(() => {
     setItems(Data);
   }, []);
   const animationHandler = (index) => {
-    setClickedIndex(index);
-    setFadeOut(true);
-    setTimeout(() => {
-      handleDelete(index);
-      setFadeOut(false);
-    }, 1000);
+    element.height = "0px";
+    // setShrink(true)
+    handleDelete(index);
   };
   let handleDelete = (itemIndex) => {
-    const newItems = items.filter((item, index) => index !== itemIndex);
-    setItems(newItems);
+    setTimeout(() => {
+      const newItems = items.filter((item, index) => index !== itemIndex);
+      setItems(newItems);
+    }, [500]);
   };
+
   return (
     <>
       <div>
-        <ul className="">
+        <ul className="transition-all duration-500">
           {items.map((item, index) => {
             return (
               <li
+                style={{ transition: "height 0.3s ease" }}
+                ref={element}
                 key={index}
-                className={`list-none border-2 rounded-lg bg-red-500 p-10 flex w-full justify-around transition-all duration-1000 ${
-                  index === clickedIndex && fadeOut
-                    ? "opacity-0"
-                    : "opacity-100"
-                }`}
+                className={`list-none border-2 rounded-lg bg-red-500 p-10 flex w-full justify-around transition-all duration-1000 `}
               >
                 <img src={item.image} alt="Emp img" />
                 <div>

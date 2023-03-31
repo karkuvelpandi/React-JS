@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  box-sizing: border-box;
+}
+
+.animated-list {
+  padding: 15px;
+}
+
+.employee-card {
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 0 10px rgb(171, 171, 171);
+  border-radius: 25px;
+}
+
+.employee-card {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  position: relative;
+  margin-bottom: 10px;
+  transition: 1s;
+  background-color: #fff;
+}
+
+.employee-card img {
+  width: 75px;
+  border-radius: 15px;
+}
+
+.employee-card .text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.employee-card .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 30px;
+  margin: 0 12px;
+  color: gainsboro;
+}
+
+.employee-card .close:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.list-item.animate-height {
+  animation: animateHeight 0.5s linear;
+}
+
+@keyframes animateHeight {
+  0% {
+    height: 115px;
+  }
+
+  100% {
+    height: 0px;
+    opacity: 0;
+  }
+}
+
+/* styles for code pen example */
+
+.List {
+  border: 1px solid #d9dddd;
+}
+
+.ListItemEven,
+.ListItemOdd {
+  box-sizing: border-box;
+  padding-top: 10px;
+  text-align: center;
+  transition: all 500ms ease-in-out;
+}
+
+.ListItemEven,
+.ListItemOdd {
+  background-color: #f8f8f0;
+}
