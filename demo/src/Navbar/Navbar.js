@@ -16,6 +16,15 @@ const Navbar = () => {
         <li className="border-4 px-2 rounded-md">
           <Link to="listfadecodepen">List Fade with codepen example</Link>
         </li>
+        <li className="border-4 px-2 rounded-md">
+          <Link to="trail5">trail5 example</Link>
+        </li>
+        <li className="border-4 px-2 rounded-md">
+          <Link to="trail6">trail6 example</Link>
+        </li>
+        <li className="border-4 px-2 rounded-md">
+          <Link to="trail7">trail7 example</Link>
+        </li>
       </ul>
     </nav>
   );

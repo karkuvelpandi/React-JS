@@ -3,7 +3,7 @@ import { VariableSizeList as List } from "react-window";
 
 const Row = ({ index, style, toggleSize }) => (
   <div className={index % 2 ? "ListItemOdd" : "ListItemEven"} style={style}>
-    Row {index}, Size {style.height}{" "}
+    Row {index}, Size {style.height}
     <button onClick={() => toggleSize(index)}>Toggle Size</button>
   </div>
 );

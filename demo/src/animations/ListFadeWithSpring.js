@@ -1,61 +1,60 @@
-import React, { useEffect, useState } from "react";
-import { FixedSizeList as List } from "react-window";
-import { useTransition, animated } from "react-spring";
-import Data from "../data.json";
-const ListFadeWithSpring = () => {
-  const [items, setItems] = useState([]);
-  useEffect(() => {
-    setItems(Data);
-  }, []);
+import { useState } from "react";
+import { FixedSizeList } from "react-window";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-  const ListItem = ({ index, style }) => {
-    const transitions = useTransition(items[index], {
-      trail: 100,
-      from: { opacity: 0 },
-      enter: { opacity: 1 },
-      leave: {
-        height: 0,
-        opacity: 0,
-        transform: "scale(0) translateX(0%)",
-      },
-    });
-    const deleteHandler = (id) => {
-      setTimeout(() => {
-        setItems(items.filter((item) => item.id !== id));
-      }, 500);
-    };
-    return transitions((styleProps, item) => (
-      <animated.div
-        style={{ ...style, ...styleProps }}
-        className="transform transition-all duration-1000"
-      >
-        <div>
-          <li
-            key={item.id}
-            className={`list-none border-2 rounded-lg bg-red-500 p-10 flex w-full justify-around transition-all duration-1000 `}
-          >
-            <img src={item.image} alt="Emp img" width="150px" height="150px" />
-            <div>
-              <h1 className="text-bold text-3xl">Name: {item.name}</h1>
-              <h3>Id: {item.id}</h3>
-              <h3>Team: {item.team}</h3>
-            </div>
-            <button
-              className="relative top-5 right-5 h-10 w-24 border-2 text-white bg-black"
-              onClick={() => deleteHandler(item.id)}
-            >
-              Delete
-            </button>
-          </li>
+const ITEM_HEIGHT = 50; // or any other value based on your list item height
+
+function List({ items, onDelete }) {
+  const handleDelete = (id) => {
+    onDelete(id);
+  };
+
+  const renderRow = ({ index, style }) => {
+    const item = items[index];
+
+    return (
+      <CSSTransition key={item.id} timeout={500} classNames="fade-exit">
+        <div
+          className=" h-8 w-20 bg-red-300 flex justify-between"
+          style={style}
+        >
+          <span>{item.title}</span>
+          <button onClick={() => handleDelete(item.id)}>Delete</button>
         </div>
-      </animated.div>
-    ));
+      </CSSTransition>
+    );
   };
 
   return (
-    <List height={800} itemCount={items.length} itemSize={250} width={800}>
-      {ListItem}
-    </List>
+    <TransitionGroup>
+      <FixedSizeList
+        height={ITEM_HEIGHT * items.length}
+        itemCount={items.length}
+        itemSize={ITEM_HEIGHT}
+        width={400}
+      >
+        {renderRow}
+      </FixedSizeList>
+    </TransitionGroup>
   );
-};
+}
+
+function ListFadeWithSpring() {
+  const [items, setItems] = useState([
+    { id: 1, title: "Item 1" },
+    { id: 2, title: "Item 2" },
+    { id: 3, title: "Item 3" },
+  ]);
+
+  const handleDelete = (id) => {
+    setItems(items.filter((item) => item.id !== id));
+  };
+
+  return (
+    <div className="App">
+      <List items={items} onDelete={handleDelete} />
+    </div>
+  );
+}
+
 export default ListFadeWithSpring;

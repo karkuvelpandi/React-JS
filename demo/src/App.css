@@ -85,3 +85,44 @@
 .ListItemOdd {
   background-color: #f8f8f0;
 }
+
+
+.fade-enter {
+  opacity: 0;
+  height: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  height: 50px;
+  transition: opacity 500ms, height 500ms;
+}
+
+.fade-exit {
+  opacity: 1;
+  height: 50px;
+}
+
+.-active {
+  opacity: 0;
+  height: 0;
+  transition: opacity 500ms, height 500ms;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.height-trans {
+  opacity: 0;
+  height: 0;
+  background-color: #dedede;
+  -moz-transition: height opacity 1s ease;
+  -webkit-transition: height opacity 1s ease;
+  -o-transition: height opacity 1s ease;
+  transition: height opacity 1s ease;
+}
