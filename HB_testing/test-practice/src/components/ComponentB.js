@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import MemoizedIframe from "./HOC/MemoizedIframe";
-export const ComponentA = () => {
+import CacheIframe from "./cache/CacheIframe";
+export const ComponentB = () => {
   const [isLoading, setIsLoading] = useState(true);
   const src = "https://karkuvelpandi-portfolio.vercel.app/";
   return (
     <>
       {isLoading && <div>Loading...</div>}
-      <MemoizedIframe
+      <CacheIframe
         src={src}
-        onLoad={() => setIsLoading(false)}
+        setIsLoading={setIsLoading}
         isLoading={isLoading}
       />
     </>
