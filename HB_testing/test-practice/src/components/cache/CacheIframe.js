@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from "react";
-import { IFrame } from "remotion";
 
 const CacheIframe = ({ src, isLoading, setIsLoading }) => {
   const [iframeDoc, setIframeDoc] = useState(null);
