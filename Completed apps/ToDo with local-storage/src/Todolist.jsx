@@ -55,7 +55,6 @@ const Todolist = () => {
     <div className='container mt-5'>
       <div className='row mx-auto row1'>
         <div className='col-md-8'>
-
           <div className='card border border-dark' >
             <div className='card-header bg-dark text-white'>
               <h1 className='text-center'>ToDo List</h1>
@@ -127,9 +126,6 @@ const Todolist = () => {
               }
             </tbody>
           </table>) : null}
-
-
-
         </div>
       </div>
     </div>
