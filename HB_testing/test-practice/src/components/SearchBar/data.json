@@ -1,0 +1,351 @@
+
+    {
+        "listId": 779,
+        "listUid": "71598542-04dc-435d-8158-d3c875a884f7",
+        "name": "A list created from the kiosk no:7",
+        "listImageUrl": "https://techcrunch.com/wp-content/uploads/2022/10/TC-Disrupt-23-Event-Card-Event-Listings-Page-466x2",
+        "description": "Nothing much",
+        "isShareable": true,
+        "isIndexable": false,
+        "createdOnBoardId": 175215,
+        "createdOnScreenId": 0,
+        "items": [
+            {
+                "itemId": 2104,
+                "itemType": "hoot",
+                "itemValue": "51723",
+                "createdAtDateTime": "2023-07-13 05:15:10",
+                "itemAddedViaChannel": null,
+                "itemAddedOnBoardId": null,
+                "userAssignedDateTime": null,
+                "userAssignedNote": null,
+                "lastUpdatedByPartyId": null,
+                "lastUpdatedDateTime": "2023-07-13 05:15:10",
+                "itemData": {
+                    "id": 51723,
+                    "postBoards": null,
+                    "boardTagsList": [
+                        "#events"
+                    ],
+                    "authorId": 12510,
+                    "owningBoardId": 175215,
+                    "requiresApproval": false,
+                    "isScheduled": false,
+                    "scheduledOnDate": null,
+                    "type": "HLBLOG",
+                    "isPinned": false,
+                    "locationInfo": {
+                        "formattedAddress": "San Francisco, CA, USA",
+                        "geometry": {
+                            "latitude": 37.7749295,
+                            "longitude": -122.4194155
+                        },
+                        "googlePlaceId": "ChIJIQBpAG2ahYAR_6128GcTUEo"
+                    },
+                    "rehootAllowed": true,
+                    "sourceType": null,
+                    "hootStats": {
+                        "favorites": 0,
+                        "comments": 0,
+                        "rehoots": 0
+                    },
+                    "eventTextLocation": null,
+                    "pinnedComment": {
+                        "commentText": null,
+                        "commentPlainText": null,
+                        "commenterName": null
+                    },
+                    "background": "#86c451",
+                    "font": "black",
+                    "title": "TechCrunch Disrupt | Startup Event | San Francisco | Sept 19-21",
+                    "showTitle": true,
+                    "description": "Join thousands of the most motivated and ambitious founders, investors and builders in San Francisco on Sept 19-21 for TechCrunch Disrupt!",
+                    "plainTextDescription": "Join thousands of the most motivated and ambitious founders, investors and\nbuilders in San Francisco on Sept 19-21 for TechCrunch Disrupt!",
+                    "eventLocationPlaceId": "ChIJIQBpAG2ahYAR_6128GcTUEo",
+                    "eventLocationText": null,
+                    "twitterHandle": null,
+                    "twitterLink": null,
+                    "collections": [
+                        "#events"
+                    ],
+                    "authorPictureUrl": "https://d1875o8iutykds.cloudfront.net/userimages/12510PI-ivelao.jpg",
+                    "authorName": "Michael Ballack",
+                    "authorInitials": "MB",
+                    "largeImages": [
+                        {
+                            "id": null,
+                            "width": 466,
+                            "url": "https://techcrunch.com/wp-content/uploads/2022/10/TC-Disrupt-23-Event-Card-Event-Listings-Page-466x269-1-1.png?w=466",
+                            "height": 269
+                        }
+                    ],
+                    "images": [
+                        {
+                            "id": null,
+                            "width": 466,
+                            "url": "https://techcrunch.com/wp-content/uploads/2022/10/TC-Disrupt-23-Event-Card-Event-Listings-Page-466x269-1-1.png?w=466",
+                            "height": 269
+                        }
+                    ],
+                    "buttonLink": "https://techcrunch.com/events/tc-disrupt-2023/tickets/",
+                    "buttonLabel": "Book Now",
+                    "mediaUrl": "https://techcrunch.com/events/tc-disrupt-2023/",
+                    "mediaSnippet": null,
+                    "pdfUrl": null,
+                    "manage": {
+                        "expiryDate": null,
+                        "favPost": false,
+                        "privateHoot": false,
+                        "setExpiryDate": true
+                    },
+                    "favPost": false,
+                    "postingCategory": "ANNT",
+                    "hootBgColorClass": "hoot-bgcolor-white",
+                    "customHootThemeColors": {
+                        "isDark": false,
+                        "background": "#86c451"
+                    },
+                    "recurringRule": null,
+                    "postedTime": "2 months ago",
+                    "eventStartDateTime": "Tue, 2023 Sep 19th 7:30 AM",
+                    "eventEndDateTime": "Thu, 2023 Sep 21st 8:30 AM",
+                    "eventTimezone": "Asia/Calcutta",
+                    "freeEvent": false
+                }
+            },
+            {
+                "itemId": 2105,
+                "itemType": "hoot",
+                "itemValue": "51719",
+                "createdAtDateTime": "2023-07-13 05:15:29",
+                "itemAddedViaChannel": null,
+                "itemAddedOnBoardId": null,
+                "userAssignedDateTime": "2023-07-14T10:40:00+05:30",
+                "userAssignedNote": null,
+                "lastUpdatedByPartyId": null,
+                "lastUpdatedDateTime": "2023-07-13 05:15:29",
+                "itemData": {
+                    "id": 51719,
+                    "postBoards": null,
+                    "boardTagsList": [
+                        "#frontpage",
+                        "#images"
+                    ],
+                    "authorId": 12510,
+                    "owningBoardId": 175215,
+                    "requiresApproval": false,
+                    "isScheduled": false,
+                    "scheduledOnDate": null,
+                    "type": "DISC",
+                    "isPinned": false,
+                    "locationInfo": null,
+                    "rehootAllowed": true,
+                    "sourceType": null,
+                    "hootStats": {
+                        "favorites": 0,
+                        "comments": 0,
+                        "rehoots": 1
+                    },
+                    "eventTextLocation": null,
+                    "pinnedComment": {
+                        "commentText": null,
+                        "commentPlainText": null,
+                        "commenterName": null
+                    },
+                    "background": "#ffda44",
+                    "font": "black",
+                    "title": "Lovely Images.",
+                    "showTitle": true,
+                    "description": "<p></p>\n<p>Just a collection of lovely images.</p>\n<p></p>",
+                    "plainTextDescription": "Just a collection of lovely images.",
+                    "eventLocationPlaceId": null,
+                    "eventLocationText": null,
+                    "twitterHandle": null,
+                    "twitterLink": null,
+                    "collections": [
+                        "#frontpage",
+                        "#images"
+                    ],
+                    "authorPictureUrl": "https://d1875o8iutykds.cloudfront.net/userimages/12510PI-ivelao.jpg",
+                    "authorName": "Michael Ballack",
+                    "authorInitials": "MB",
+                    "largeImages": [
+                        {
+                            "id": null,
+                            "width": 800,
+                            "url": "https://d2oqhl3js3c5ij.cloudfront.net/175215/hoots/htmlhoots/hootfiles/images/51719I-zsxkfg.jpg",
+                            "height": 532
+                        }
+                    ],
+                    "images": [
+                        {
+                            "id": null,
+                            "width": 800,
+                            "url": "https://d2oqhl3js3c5ij.cloudfront.net/175215/hoots/htmlhoots/hootfiles/images/51719I-zsxkfg.jpg",
+                            "height": 532
+                        }
+                    ],
+                    "buttonLink": null,
+                    "buttonLabel": null,
+                    "pdfUrl": null,
+                    "manage": {
+                        "expiryDate": null,
+                        "favPost": false,
+                        "privateHoot": false,
+                        "setExpiryDate": true
+                    },
+                    "favPost": false,
+                    "postingCategory": "ANNT",
+                    "hootBgColorClass": "hoot-bgcolor-yellow",
+                    "customHootThemeColors": null,
+                    "recurringRule": null,
+                    "postedTime": "2 months ago",
+                    "eventStartDateTime": "",
+                    "eventEndDateTime": "",
+                    "eventTimezone": "",
+                    "freeEvent": false
+                }
+            },
+            {
+                "itemId": 2106,
+                "itemType": "hoot",
+                "itemValue": "48947",
+                "createdAtDateTime": "2023-07-11 07:33:01",
+                "itemAddedViaChannel": null,
+                "itemAddedOnBoardId": null,
+                "userAssignedDateTime": null,
+                "userAssignedNote": null,
+                "lastUpdatedByPartyId": null,
+                "lastUpdatedDateTime": null,
+                "itemData": {
+                    "id": 48947,
+                    "postBoards": null,
+                    "boardTagsList": [
+                        ""
+                    ],
+                    "authorId": 12510,
+                    "owningBoardId": 175215,
+                    "requiresApproval": false,
+                    "isScheduled": false,
+                    "scheduledOnDate": null,
+                    "type": "HLBLOG",
+                    "isPinned": false,
+                    "locationInfo": null,
+                    "rehootAllowed": true,
+                    "sourceType": null,
+                    "hootStats": {
+                        "favorites": 0,
+                        "comments": 0,
+                        "rehoots": 0
+                    },
+                    "eventTextLocation": null,
+                    "pinnedComment": {
+                        "commentText": null,
+                        "commentPlainText": null,
+                        "commenterName": null
+                    },
+                    "background": "#ffda44",
+                    "font": "black",
+                    "title": "Rust-Powered Command-Line Utilities to Increase Your Productivity",
+                    "showTitle": true,
+                    "description": "Last month, I wrote an article sharing seven Rust-powered command-line utilities. Those are modern and fast tools you can use every day with your terminal. Since publishing that original article, I've been searching for more Rust-powered command-line utilities, and I discovered more gems that I'm excited to share with you today.",
+                    "plainTextDescription": "Last month, I wrote an article sharing seven Rust-powered command-line\nutilities. Those are modern and fast tools you can use every day with your\nterminal. Since publishing that original article, I've been searching for more\nRust-powered command-line utilities, and I discovered more gems that I'm excited\nto share with you today.",
+                    "eventLocationPlaceId": null,
+                    "eventLocationText": null,
+                    "twitterHandle": null,
+                    "twitterLink": null,
+                    "collections": [
+                        ""
+                    ],
+                    "authorPictureUrl": "https://d1875o8iutykds.cloudfront.net/userimages/12510PI-ivelao.jpg",
+                    "authorName": "Michael Ballack",
+                    "authorInitials": "MB",
+                    "largeImages": [
+                        {
+                            "id": null,
+                            "width": 800,
+                            "url": "https://d2oqhl3js3c5ij.cloudfront.net/175215/hoots/htmlhoots/hootfiles/images/48947I-q0knxr.png",
+                            "height": 460
+                        }
+                    ],
+                    "images": [
+                        {
+                            "id": null,
+                            "width": 800,
+                            "url": "https://d2oqhl3js3c5ij.cloudfront.net/175215/hoots/htmlhoots/hootfiles/images/48947I-q0knxr.png",
+                            "height": 460
+                        }
+                    ],
+                    "buttonLink": "https://towardsdatascience.com/rust-powered-command-line-utilities-to-increase-your-productivity-eea03a4cf83a?gi=3cee84095709",
+                    "buttonLabel": "View More",
+                    "mediaUrl": "https://towardsdatascience.com/rust-powered-command-line-utilities-to-increase-your-productivity-eea03a4cf83a?gi=3cee84095709",
+                    "mediaSnippet": null,
+                    "pdfUrl": null,
+                    "manage": {
+                        "expiryDate": null,
+                        "favPost": false,
+                        "privateHoot": false,
+                        "setExpiryDate": true
+                    },
+                    "favPost": false,
+                    "postingCategory": "LINK",
+                    "hootBgColorClass": "hoot-bgcolor-yellow",
+                    "customHootThemeColors": null,
+                    "recurringRule": null,
+                    "postedTime": "a year ago",
+                    "eventStartDateTime": "",
+                    "eventEndDateTime": "",
+                    "eventTimezone": "",
+                    "freeEvent": false
+                }
+            }
+        ],
+        "listBoards": [
+            {
+                "object": "board",
+                "id": 175215,
+                "url": "https://stage.hootboard.com/b/175215/127.0.0.1",
+                "name": "127.0.0.1",
+                "description": "A HootBoard for all things #tech and #fun.",
+                "type": "HSI",
+                "isPremium": true,
+                "isDemo": false,
+                "logoUrl": "https://d2oqhl3js3c5ij.cloudfront.net/175215/images/bl-arkzdk.png",
+                "customColors": {
+                    "hoot": [
+                        {
+                            "isDark": false,
+                            "background": "#86c451"
+                        },
+                        {
+                            "isDark": false,
+                            "background": "#ebf4e2"
+                        },
+                        {
+                            "isDark": false,
+                            "background": "#ffffff"
+                        }
+                    ],
+                    "board": {
+                        "button": "#86c451",
+                        "background": "#ebf4e2",
+                        "colorPalette": "rec",
+                        "font": "#ffffff"
+                    }
+                },
+                "stats": {},
+                "collections": [],
+                "location": {
+                    "object": "location",
+                    "latitude": "8.5241391",
+                    "longitude": "76.9366376",
+                    "googlePlaceId": "ChIJR827Bbi7BTsRy4FcXKufQxU",
+                    "formattedAddress": "Thiruvananthapuram, Kerala, India"
+                }
+            }
+        ]
+
+    }
+    
+   
+   
