@@ -6,7 +6,7 @@ export const ExpenseFilter = (props) => {
   };
   return (
     <div className="flex justify-between">
-      <span>Filter by year</span>
+      <span className="font-bold text-white">Filter by year</span>
       <select value={props.selectedYear} onChange={filterHandler}>
         <option>2019</option>
         <option>2020</option>

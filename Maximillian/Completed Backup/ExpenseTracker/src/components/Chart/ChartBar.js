@@ -5,12 +5,7 @@ export const ChartBar = (props) => {
   if (props.maxValue > 0) {
     barFillHeight = Math.round((props.value / props.maxValue) * 100) + "%";
   }
-  const barFillStyles = {
-    backgroundColor: "#4826b9",
-    width: "100%",
-    transition: "all 0.3s ease-out",
-  };
-  console.log(props.value);
+
   return (
     <div className="h-auto w-6">
       <div className="h-40 w-4 bg-white rounded-md overflow-hidden mx-auto flex items-end">
@@ -19,7 +14,7 @@ export const ChartBar = (props) => {
           style={{ height: barFillHeight }}
         ></div>
       </div>
-      <div>{props.label}</div>
+      <div className="font-semibold text-white">{props.label}</div>
     </div>
   );
 };

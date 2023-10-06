@@ -6,8 +6,6 @@ export const Chart = (props) => {
   // Here we have array of values, but the max() method require each values as a separate argument.
   // So we can use spread operator to pullout all the value from an array and pass it into the max() function.
   const maxValue = Math.max(...dataPointValuesArr);
-  console.log(maxValue);
-  console.log(dataPointValuesArr);
   return (
     <div className="flex gap-5 overflow-x-auto justify-around p-5">
       {props.dataPoints.map((dataPoint) => (
